@@ -1,0 +1,6 @@
+interface:
+  display_name: "Vincent小红书爆款封面（20种风格全能大师版）"
+  short_description: "生成20种风格的小红书3:4竖版爆款封面提示词（含经典大字抠图风1-8、跨美学热门风9-13、世界平面设计大师致敬风14-20），支持一键预设、主页配色保持与横版扩展"
+  default_prompt: "Use $vincent-xhs-cover to create a 3:4 Xiaohongshu cover prompt across 20 viral and master-designer visual styles."
+
+
