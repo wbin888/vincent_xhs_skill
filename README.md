@@ -24,9 +24,15 @@ vincent-xhs-cover/
   SKILL.md
   agents/
     openai.yaml
+  references/
+    styles/
+      01-big-title-top.md
+      ...
+      20-before-after.md
 ```
 
-- `SKILL.md`：Skill 主体说明、智能推荐路由表、8 步交互式单选题流程（支持一键预设）和 **20 种封面与招生海报提示词模板**。
+- `SKILL.md`：精简核心（约 15KB）：核心铁律、智能推荐路由表、8 步交互式单选题流程（支持一键预设）、出图复核清单与输出格式。
+- `references/styles/`：**20 种风格各自独立的视觉特征与提示词模板**，用户选定风格后才按需读取，避免每次加载全部模板、节省上下文。
 - `agents/openai.yaml`：OpenAI/Codex 侧的展示名、简介和默认调用提示。
 
 ## 安装方式
