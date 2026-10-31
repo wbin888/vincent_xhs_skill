@@ -1,6 +1,6 @@
 interface:
-  display_name: "Vincent小红书爆款封面（13种风格全能版）"
-  short_description: "生成13种风格的小红书3:4竖版爆款封面提示词（含经典大字抠图风1-8与跨美学热门风9-13），支持智能推荐、一键预设、主页配色保持与横版扩展"
-  default_prompt: "Use $vincent-xhs-cover to create a 3:4 Xiaohongshu cover prompt across 13 viral visual styles."
+  display_name: "Vincent小红书爆款封面（15种风格全能版）"
+  short_description: "生成15种风格的小红书3:4竖版爆款封面提示词（含经典大字抠图风1-8、跨美学热门风9-13、瑜伽/普拉提运动招生海报风14-15），支持智能推荐、一键预设与横版扩展"
+  default_prompt: "Use $vincent-xhs-cover to create a 3:4 Xiaohongshu cover or Yoga/Pilates course enrollment poster prompt across 15 visual styles."
 
 
