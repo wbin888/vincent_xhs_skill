@@ -48,8 +48,6 @@ git clone https://github.com/wbin888/vincent_xhs_skill.git ~/vincent_xhs_skill &
 - **GitHub CLI**：`gh repo clone wbin888/vincent_xhs_skill ~/vincent_xhs_skill`
 - **ZIP**：打开 <https://github.com/wbin888/vincent_xhs_skill>，点 **Code → Download ZIP**，解压。
 
-> 本仓库为私有仓库，需要先获得仓库访问权限，并在本机登录 GitHub（`gh auth login`）。
-
 下载后要用的是其中的 **`vincent-xhs-cover/` 整个文件夹**，里面必须包含：
 
 ```text
