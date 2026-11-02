@@ -242,3 +242,13 @@ vincent_xhs_skill/
 ## 致谢
 
 风格 21 改编自 [yanliudesign/mono-color-skill](https://github.com/yanliudesign/mono-color-skill)（MIT License，© 2026 Yan Liu），仅改编文字规则，未包含其示例图片。许可声明见 [`vincent-xhs-cover/THIRD_PARTY_NOTICES.md`](vincent-xhs-cover/THIRD_PARTY_NOTICES.md)。
+
+---
+
+## 另一个 Skill：taobao-visual-studio
+
+淘宝/天猫主图 + 详情页视觉策划与生图 Skill，见 [`taobao-visual-studio/`](taobao-visual-studio/README.md)。
+
+```bash
+git clone https://github.com/wbin888/vincent_xhs_skill.git ~/vincent_xhs_skill && mkdir -p ~/.copilot/skills && cp -R ~/vincent_xhs_skill/taobao-visual-studio ~/.copilot/skills/
+```
