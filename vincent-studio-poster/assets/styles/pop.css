@@ -1,0 +1,69 @@
+/* 多巴胺派对 — 店庆 / 开业 / 团课 / 亲子 / 夏日 / 儿童节 / 520 */
+.st-pop{--bg:#FFE45C;--ink:#1A1A1A;--accent:#FF5FA2;--accent2:#3D7BFF;--accent3:#2FD38A;--paper:#FFFFFF;--pmin:34rem;--base:3rem;
+  padding:6rem 6rem 5rem;gap:2.4rem;
+  grid-template-columns:minmax(0,1fr);
+  grid-template-rows:auto auto 1fr auto auto auto auto;
+  grid-template-areas:"brand" "head" "photo" "pts" "off" "info" "fine"}
+.st-pop.v-berry{--bg:#FF7AB6;--accent:#FFE45C;--accent2:#6C4DFF;--accent3:#2FD38A}
+.st-pop.v-mint{--bg:#8EF0C8;--accent:#FF5FA2;--accent2:#3D7BFF;--accent3:#FFE45C}
+
+.st-pop .deco{background:
+  radial-gradient(circle,var(--paper) .45rem,transparent .55rem) 0 0/5rem 5rem;opacity:1}
+.st-pop .deco .d2{width:46rem;height:46rem;border-radius:50%;background:var(--accent);right:-16rem;top:-14rem;border:.6rem solid var(--ink)}
+.st-pop .deco .d3{width:30rem;height:30rem;border-radius:50%;background:var(--accent2);left:-12rem;bottom:18%;border:.6rem solid var(--ink)}
+.st-pop .deco .d4{width:12rem;height:12rem;left:8%;top:38%;background:var(--accent3);border:.5rem solid var(--ink);transform:rotate(18deg);border-radius:2rem}
+
+.st-pop .brand{background:var(--paper);border:.4rem solid var(--ink);border-radius:99em;padding:.6rem 2rem .6rem .8rem;justify-self:start;box-shadow:.6rem .6rem 0 var(--ink)}
+.st-pop .brand .logo{height:2em;border-radius:50%}
+.st-pop .brand .btag{display:none}
+.st-pop .headline{text-align:center;align-items:center}
+.st-pop .eyebrow{background:var(--ink);color:var(--paper);padding:.4em 1em;border-radius:99em;letter-spacing:.18em;transform:rotate(-2deg)}
+.st-pop .title{font-size:calc(4.3em * var(--tk,1));font-weight:900;line-height:1.08;color:var(--paper);
+  -webkit-text-stroke:.07em var(--ink);paint-order:stroke fill;text-shadow:.07em .08em 0 var(--ink);letter-spacing:.01em}
+.st-pop .title em{color:var(--accent)}
+.st-pop .subtitle{font-weight:800;opacity:1}
+
+.st-pop .photo{justify-self:center;width:84%}
+.st-pop .photo .frame{border:.6rem solid var(--ink);border-radius:4rem;box-shadow:1.6rem 1.6rem 0 var(--ink);transform:rotate(-2deg);background:var(--paper)}
+.st-pop .photo.ph .frame{background:
+  radial-gradient(circle at 30% 35%,var(--accent) 0 16%,transparent 16.5%),
+  radial-gradient(circle at 70% 60%,var(--accent2) 0 20%,transparent 20.5%),
+  radial-gradient(circle at 42% 78%,var(--accent3) 0 11%,transparent 11.5%),
+  repeating-linear-gradient(45deg,#fff 0 2rem,#FFF6C2 2rem 4rem)}
+
+.st-pop .hero{grid-area:photo;align-self:start;justify-self:end;z-index:3;margin:-3rem 2rem 0 0;
+  width:6.4em;height:6.4em;background:var(--accent);color:var(--paper);
+  clip-path:polygon(50% 0,59% 13%,74% 5%,76% 21%,92% 19%,86% 35%,100% 43%,88% 54%,97% 68%,81% 71%,80% 88%,65% 83%,57% 98%,46% 86%,32% 96%,28% 80%,11% 82%,15% 66%,1% 57%,12% 46%,2% 32%,18% 28%,16% 11%,32% 15%,40% 1%);
+  flex-direction:column;flex-wrap:nowrap;justify-content:center;align-items:center;text-align:center;transform:rotate(10deg);padding:1em}
+.st-pop .hero .hv{font-size:2.3em;-webkit-text-stroke:.05em var(--ink);paint-order:stroke fill;line-height:1}
+.st-pop .hero .hu{font-size:.8em;color:var(--ink)}
+.st-pop .hero .hl{flex-basis:auto;font-size:.42em;color:var(--ink);font-weight:800;margin-top:.2em;max-width:8em}
+
+.st-pop .points{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:1.2rem}
+.st-pop .points li{background:var(--paper);border:.35rem solid var(--ink);border-radius:99em;padding:.35em 1em;font-weight:800;font-size:.82em;box-shadow:.45rem .45rem 0 var(--ink);align-items:center}
+.st-pop .points li:nth-child(3n+1){background:var(--accent);color:var(--paper)}
+.st-pop .points li:nth-child(3n+2){background:var(--accent2);color:var(--paper)}
+.st-pop .points li:nth-child(3n){background:var(--accent3)}
+.st-pop .points li i{display:none}
+
+.st-pop .offers{grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:2rem}
+.st-pop .offer{background:var(--paper);border:.4rem solid var(--ink);border-radius:2rem;padding:1.3rem 1.6rem;box-shadow:.6rem .6rem 0 var(--ink);align-items:center;text-align:center}
+.st-pop .offer .otag{position:absolute;top:-1.2em;left:50%;transform:translateX(-50%) rotate(-3deg);background:var(--accent2);color:#fff;border:.3rem solid var(--ink)}
+.st-pop .offer .op{color:var(--accent);-webkit-text-stroke:.03em var(--ink)}
+.st-pop .offer .otag{align-self:center}
+
+.st-pop .info{background:var(--paper);border:.4rem solid var(--ink);border-radius:2.4rem;padding:1.4rem 1.4rem 1.4rem 2.4rem;box-shadow:.6rem .6rem 0 var(--ink)}
+.st-pop .info .cta{background:var(--accent2);color:var(--paper);border:.35rem solid var(--ink);font-size:.86em}
+.st-pop .fine{text-align:center;opacity:.75}
+
+.st-pop.ra-tall{--base:3.3rem;--pmin:60rem;padding:8rem 6rem 6rem}
+.st-pop.ra-square{--base:2.6rem;--pmin:0;padding:5rem;gap:2rem 4rem;
+  grid-template-columns:minmax(0,1fr) 40rem;grid-template-rows:auto auto auto 1fr auto;
+  grid-template-areas:"brand photo" "head photo" "pts photo" "off photo" "info info"}
+.st-pop.ra-square .photo,.st-pop.ra-wide .photo{width:100%}
+.st-pop.ra-square .headline,.st-pop.ra-wide .headline{text-align:left;align-items:flex-start}
+.st-pop.ra-square .points,.st-pop.ra-wide .points{justify-content:flex-start}
+.st-pop.ra-square .fine{display:none}
+.st-pop.ra-wide{--base:2.8rem;--pmin:0;padding:6rem 7rem;gap:2.4rem 6rem;
+  grid-template-columns:minmax(0,1fr) 66rem;grid-template-rows:auto auto auto 1fr auto auto;
+  grid-template-areas:"brand photo" "head photo" "pts photo" "off photo" "info photo" "fine photo"}

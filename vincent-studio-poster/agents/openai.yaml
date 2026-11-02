@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vincent工作室活动海报（瑜伽/健身/普拉提/康复/心身灵/音乐疗愈）"
+  short_description: "为瑜伽馆、健身房、普拉提、运动康复、心身灵、音乐疗愈工作室策划店庆/促销/节假日活动，并用 8 种行业风格一次输出 3:4、9:16、1:1、16:9 四规格精确排版海报 PNG"
+  default_prompt: "Use $vincent-studio-poster to plan (or take my) studio event campaign, extract poster copy, recommend a style, and render 3:4, 9:16, 1:1 and 16:9 posters with exact Chinese text, prices and logo."

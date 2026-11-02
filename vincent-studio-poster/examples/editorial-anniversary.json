@@ -1,0 +1,43 @@
+{
+  "style": "editorial",
+  "output_name": "demo-editorial-anniversary",
+  "brand": {
+    "name": "MOVE 工作室",
+    "name_en": "Vol.05 · Anniversary Issue",
+    "tagline": "2021—2026"
+  },
+  "eyebrow": "5TH ANNIVERSARY · 周年特刊",
+  "title": "五年\n**一起变好**",
+  "subtitle": "谢谢每一个准时出现在垫子上的你",
+  "hero": {
+    "value": "5",
+    "unit": "周年"
+  },
+  "points": [
+    "周年公开课 全周免费",
+    "老会员续卡 **加赠 60 天**",
+    "会员故事展 · 周年合影"
+  ],
+  "offers": [
+    {
+      "name": "周年年卡",
+      "price": "3999",
+      "original": "¥5280",
+      "tag": "限 55 张"
+    },
+    {
+      "name": "周年双人卡",
+      "price": "6999",
+      "original": "¥10560"
+    }
+  ],
+  "date": "10.10 — 10.20",
+  "location": "南京 · 新街口 XX 号",
+  "cta": "到店领取周年礼",
+  "ratios": [
+    "3:4",
+    "9:16",
+    "1:1",
+    "16:9"
+  ]
+}
