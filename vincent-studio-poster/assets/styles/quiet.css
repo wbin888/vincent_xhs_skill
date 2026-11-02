@@ -1,0 +1,68 @@
+/* 静奢极简 · Quiet Luxury — 普拉提 / 高端私教 / 会员制工作室 */
+.st-quiet{--bg:#ECE6DE;--ink:#26221F;--accent:#9C8270;--accent2:#C9B8A6;--line:rgba(38,34,31,.22);--onphoto:#FFFFFF;--pmin:44rem;--base:3rem;
+  padding:6rem 7rem 5rem;gap:2.4rem 4rem;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  grid-template-rows:1fr auto auto auto auto auto;
+  grid-template-areas:"photo photo" "head head" "pts pts" "off off" "info info" "fine fine"}
+
+/* full-bleed photo with brand + hero overlaid */
+.st-quiet .photo{margin:-6rem -7rem 1rem}
+.st-quiet .photo .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.38) 0%,rgba(0,0,0,0) 28%,rgba(0,0,0,0) 70%,rgba(38,34,31,.25) 100%)}
+.st-quiet .photo.ph .frame{background:
+  radial-gradient(circle at 68% 58%,transparent 0 21%,rgba(236,230,222,.55) 21.2% 21.5%,transparent 21.7%),
+  radial-gradient(circle at 68% 58%,transparent 0 31%,rgba(236,230,222,.35) 31.2% 31.4%,transparent 31.6%),
+  linear-gradient(160deg,#6E5D51 0%,#9C8270 55%,#C9B8A6 100%)}
+.st-quiet .brand{grid-area:photo;align-self:start;color:var(--onphoto);z-index:2}
+.st-quiet .brand .bname b{font-family:var(--serif);font-weight:600;letter-spacing:.2em}
+.st-quiet .brand .logo{filter:var(--logo-filter,none)}
+
+.st-quiet .hero{grid-area:photo;align-self:end;justify-self:end;z-index:2;margin-bottom:-4rem;
+  width:6.4em;height:6.4em;border-radius:50%;background:var(--ink);color:var(--bg);
+  flex-direction:column;flex-wrap:nowrap;align-items:center;justify-content:center;text-align:center;gap:.1em;padding:.6em}
+.st-quiet .hero .hv{font-family:var(--latin-serif);font-weight:400;font-size:2.3em;letter-spacing:0;line-height:1}
+.st-quiet .hero .hu{font-size:.62em;font-weight:500;letter-spacing:.2em}
+.st-quiet .hero .hl{flex-basis:auto;font-size:.44em;letter-spacing:.08em;margin-top:.3em;opacity:.8;max-width:9em}
+
+.st-quiet .eyebrow{font-family:var(--latin-sans);font-weight:500;font-size:.5em;letter-spacing:.42em;color:var(--accent)}
+.st-quiet .title{font-family:var(--serif);font-weight:600;letter-spacing:.08em;line-height:1.22;font-size:calc(3em * var(--tk,1))}
+.st-quiet .title em{color:var(--accent)}
+.st-quiet .subtitle{font-size:.72em;letter-spacing:.06em;opacity:.75}
+
+.st-quiet .points{flex-direction:row;flex-wrap:wrap;gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.st-quiet .points li{flex:1 1 0;flex-direction:column;gap:.25em;padding:.9em .9em .9em 0;font-size:.74em;letter-spacing:.04em}
+.st-quiet .points li + li{border-left:1px solid var(--line);padding-left:.9em}
+.st-quiet .points li i{font-family:var(--latin-serif);font-weight:400;font-style:italic;color:var(--accent);font-size:.9em}
+
+.st-quiet .offers{grid-template-columns:minmax(0,1fr);gap:0}
+.st-quiet .offer{display:grid;grid-template-columns:auto 1fr auto;grid-template-areas:"name note price" "name note orig";align-items:baseline;column-gap:1.2em;padding:.55em 0;border-bottom:1px dashed var(--line)}
+.st-quiet .offer .on{grid-area:name;font-size:.74em;font-weight:600;letter-spacing:.08em}
+.st-quiet .offer .onote{grid-area:note;font-size:.52em;opacity:.65}
+.st-quiet .offer .op{grid-area:price;font-family:var(--latin-serif);font-weight:500;font-size:1.25em;text-align:right}
+.st-quiet .offer .oo{grid-area:orig;text-align:right;font-size:.46em}
+.st-quiet .offer .otag{position:absolute;left:-.2em;top:-.9em;background:none;color:var(--accent);padding:0;font-size:.42em;letter-spacing:.3em}
+
+.st-quiet .info .meta .date{font-family:var(--serif);font-weight:600;letter-spacing:.06em}
+.st-quiet .info .cta{border:1px solid var(--ink);border-radius:0;font-weight:500;letter-spacing:.24em;font-size:.62em;padding:1em 2em}
+.st-quiet .info .qr img{border-radius:0}
+
+/* 9:16 */
+.st-quiet.ra-tall{--base:3.3rem;--pmin:80rem;padding:7rem 7rem 6rem}
+.st-quiet.ra-tall .photo{margin:-7rem -7rem 1rem}
+
+/* 1:1 & 16:9 — photo bleeds on the left */
+.st-quiet.ra-square{--base:2.55rem;--pmin:0;padding:6rem 6rem 5rem;gap:1.8rem 5rem;
+  grid-template-columns:44rem minmax(0,1fr);grid-template-rows:auto auto 1fr auto auto auto;
+  grid-template-areas:"photo brand" "photo head" "photo pts" "photo off" "photo info" "photo fine"}
+.st-quiet.ra-square .photo{margin:-6rem 0 -5rem -6rem}
+.st-quiet.ra-square .brand,.st-quiet.ra-wide .brand{grid-area:brand;color:var(--ink)}
+.st-quiet.ra-square .points,.st-quiet.ra-wide .points{flex-direction:column;border:0}
+.st-quiet.ra-square .points li,.st-quiet.ra-wide .points li{flex-direction:row;padding:.5em 0;border-left:0;border-bottom:1px solid var(--line)}
+.st-quiet.ra-square .points li + li,.st-quiet.ra-wide .points li + li{padding-left:0;border-left:0}
+.st-quiet.ra-square .hero,.st-quiet.ra-wide .hero{margin:0 3rem 3rem 0}
+.st-quiet.ra-square .fine{display:none}
+.st-quiet.ra-square .photo .frame::after,.st-quiet.ra-wide .photo .frame::after{background:none}
+
+.st-quiet.ra-wide{--base:2.8rem;--pmin:0;padding:7rem 9rem 6rem;gap:2rem 9rem;
+  grid-template-columns:82rem minmax(0,1fr);grid-template-rows:auto auto 1fr auto auto auto;
+  grid-template-areas:"photo brand" "photo head" "photo pts" "photo off" "photo info" "photo fine"}
+.st-quiet.ra-wide .photo{margin:-7rem 0 -6rem -9rem}

@@ -1,0 +1,43 @@
+{
+  "style": "festive",
+  "variant": "red",
+  "output_name": "demo-spring-festival",
+  "brand": {
+    "name": "栖木瑜伽",
+    "name_en": "QIMU YOGA"
+  },
+  "eyebrow": "丙午马年 · 新春",
+  "title": "新春|**纳福**",
+  "subtitle": "新岁启程 身心常安",
+  "hero": {
+    "value": "福",
+    "unit": "",
+    "label": "开年礼"
+  },
+  "points": [
+    "新春开年课 免费体验",
+    "续卡赠 **新春福袋**",
+    "初八起正常排课"
+  ],
+  "offers": [
+    {
+      "name": "新春年卡",
+      "price": "3680",
+      "original": "日常价 ¥4680",
+      "tag": "限定"
+    },
+    {
+      "name": "开年 10 次卡",
+      "price": "888"
+    }
+  ],
+  "date": "2.17 — 3.03",
+  "location": "上海 · 静安区 XX 路 88 号",
+  "cta": "开年预约",
+  "ratios": [
+    "3:4",
+    "9:16",
+    "1:1",
+    "16:9"
+  ]
+}

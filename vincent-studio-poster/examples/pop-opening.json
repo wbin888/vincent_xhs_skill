@@ -1,0 +1,44 @@
+{
+  "style": "pop",
+  "output_name": "demo-pop-opening",
+  "brand": {
+    "name": "跳跳舞蹈健身",
+    "name_en": "JUMP STUDIO"
+  },
+  "eyebrow": "NEW OPENING",
+  "title": "新店开业\n**一起嗨**",
+  "subtitle": "团课全天免费体验 · 现场抽奖",
+  "hero": {
+    "value": "0",
+    "unit": "元",
+    "label": "首节团课"
+  },
+  "points": [
+    "尊巴 Zumba",
+    "燃脂搏击",
+    "爵士 Jazz",
+    "亲子瑜伽"
+  ],
+  "offers": [
+    {
+      "name": "开业月卡",
+      "price": "199",
+      "original": "¥399",
+      "tag": "限 100 张"
+    },
+    {
+      "name": "团课 20 次",
+      "price": "599",
+      "original": "¥980"
+    }
+  ],
+  "date": "3.08 — 3.10",
+  "location": "成都 · 春熙路 XX 号 5F",
+  "cta": "扫码报名",
+  "ratios": [
+    "3:4",
+    "9:16",
+    "1:1",
+    "16:9"
+  ]
+}

@@ -1,0 +1,65 @@
+/* 疗愈光晕 — 心身灵 / 音乐疗愈 / 颂钵 / 冥想之夜 / 满月仪式 */
+.st-aura{--bg:#1D1A33;--ink:#F4EFFF;--accent:#C9B6FF;--accent2:#FFC6DA;--accent3:#A8E6DA;--glass:rgba(255,255,255,.08);--glassline:rgba(255,255,255,.2);--pmin:34rem;--base:3rem;
+  padding:6rem 6rem 5rem;gap:2.4rem;
+  grid-template-columns:minmax(0,1fr);
+  grid-template-rows:auto auto 1fr auto auto auto auto;
+  grid-template-areas:"brand" "head" "photo" "pts" "off" "info" "fine";
+  background:
+    radial-gradient(circle at 18% 12%,rgba(201,182,255,.55),transparent 42%),
+    radial-gradient(circle at 88% 58%,rgba(255,198,218,.38),transparent 40%),
+    radial-gradient(circle at 25% 92%,rgba(168,230,218,.32),transparent 42%),
+    var(--bg)}
+.st-aura.v-dawn{--bg:#F6EFF3;--ink:#3A2F4A;--accent:#9C84E8;--accent2:#F29BB8;--accent3:#6CC4B4;--glass:rgba(255,255,255,.55);--glassline:rgba(58,47,74,.14)}
+.st-aura .deco .d2{left:50%;top:50%;width:160rem;height:160rem;transform:translate(-50%,-50%);border-radius:50%;
+  background:repeating-radial-gradient(circle,transparent 0 5.6rem,rgba(255,255,255,.06) 5.6rem 5.75rem)}
+.st-aura.v-dawn .deco .d2{background:repeating-radial-gradient(circle,transparent 0 5.6rem,rgba(58,47,74,.06) 5.6rem 5.75rem)}
+
+.st-aura .brand .bname b{font-family:var(--serif);font-weight:500;letter-spacing:.24em}
+.st-aura .headline{text-align:center;align-items:center}
+.st-aura .eyebrow{font-family:var(--latin-serif);font-style:italic;font-weight:400;text-transform:none;letter-spacing:.3em;color:var(--accent)}
+.st-aura .title{font-family:var(--serif);font-weight:500;letter-spacing:.14em;line-height:1.25;font-size:calc(3.6em * var(--tk,1))}
+.st-aura .title em{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.st-aura .subtitle{font-family:var(--serif);letter-spacing:.12em;font-size:.76em;opacity:.8}
+
+.st-aura .photo{container-type:size;display:grid;place-items:center}
+.st-aura .photo .frame{position:relative;inset:auto;width:min(100cqw,100cqh);height:min(100cqw,100cqh);border-radius:50%;
+  box-shadow:0 0 0 1.6rem rgba(255,255,255,.06),0 0 0 3.6rem rgba(255,255,255,.04),0 0 8rem 2rem rgba(201,182,255,.45)}
+.st-aura .photo.ph .frame{background:
+  radial-gradient(circle at 50% 50%,rgba(255,255,255,.9) 0 6%,transparent 26%),
+  conic-gradient(from 200deg,var(--accent),var(--accent2),var(--accent3),var(--accent));filter:saturate(.9)}
+
+.st-aura .hero{grid-area:photo;align-self:end;justify-self:end;z-index:2;width:6em;height:6em;border-radius:50%;
+  background:var(--glass);border:1px solid var(--glassline);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  flex-direction:column;flex-wrap:nowrap;justify-content:center;align-items:center;text-align:center;padding:.6em}
+.st-aura .hero .hv{font-family:var(--latin-serif);font-weight:400;font-size:2.2em;line-height:1}
+.st-aura .hero .hu{font-size:.6em;font-weight:500;letter-spacing:.2em}
+.st-aura .hero .hl{flex-basis:auto;font-size:.42em;margin-top:.3em;max-width:9em}
+
+.st-aura .points{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:1.4rem}
+.st-aura .points li{flex-direction:column;align-items:center;text-align:center;gap:.3em;background:var(--glass);border:1px solid var(--glassline);border-radius:2rem;padding:1em .6em;font-size:.74em;font-family:var(--serif);font-weight:600;letter-spacing:.06em}
+.st-aura .points li i{font-family:var(--latin-serif);font-style:italic;font-weight:400;color:var(--accent);font-size:.9em}
+
+.st-aura .offers{grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:1.4rem}
+.st-aura .offer{background:var(--glass);border:1px solid var(--glassline);border-radius:2rem;padding:1.2rem 1.6rem;align-items:center;text-align:center}
+.st-aura .offer .op{font-family:var(--latin-serif);font-weight:400}
+.st-aura .offer .otag{align-self:center;background:linear-gradient(90deg,var(--accent),var(--accent2));color:#1D1A33}
+
+.st-aura .info{justify-content:center;text-align:center;flex-direction:column;gap:1.4rem}
+.st-aura .info .meta{align-items:center}
+.st-aura .info .meta .date{font-family:var(--serif);letter-spacing:.12em;font-weight:600}
+.st-aura .info .cta{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#1D1A33;letter-spacing:.16em}
+.st-aura .fine{text-align:center}
+
+.st-aura.ra-tall{--base:3.3rem;--pmin:56rem;padding:8rem 7rem 6rem}
+.st-aura.ra-square{--base:2.6rem;--pmin:0;padding:5.5rem;gap:2rem 4rem;
+  grid-template-columns:minmax(0,1fr) 40rem;grid-template-rows:auto auto 1fr auto auto;
+  grid-template-areas:"brand photo" "head photo" "pts photo" "off photo" "info info"}
+.st-aura.ra-square .headline,.st-aura.ra-wide .headline{text-align:left;align-items:flex-start}
+.st-aura.ra-square .points,.st-aura.ra-wide .points{display:flex;flex-direction:column;gap:.9rem}
+.st-aura.ra-square .points li,.st-aura.ra-wide .points li{flex-direction:row;text-align:left;padding:.55em 1em}
+.st-aura.ra-square .info,.st-aura.ra-wide .info{flex-direction:row;justify-content:flex-start;text-align:left}
+.st-aura.ra-square .info .meta,.st-aura.ra-wide .info .meta{align-items:flex-start}
+.st-aura.ra-square .fine{display:none}
+.st-aura.ra-wide{--base:2.8rem;--pmin:0;padding:7rem 9rem;gap:2.2rem 8rem;
+  grid-template-columns:minmax(0,1fr) 70rem;grid-template-rows:auto auto auto 1fr auto auto;
+  grid-template-areas:"brand photo" "head photo" "pts photo" "off photo" "info photo" "fine photo"}

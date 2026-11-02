@@ -1,0 +1,20 @@
+{
+  "style": "linen",
+  "ratios": ["3:4", "9:16", "1:1", "16:9"],
+  "output_name": "demo-yoga-anniversary",
+  "brand": { "name": "栖木瑜伽", "name_en": "QIMU YOGA STUDIO", "tagline": "Since 2023" },
+  "eyebrow": "3rd Anniversary · 感恩有你",
+  "title": "三周年\n与**呼吸**同在",
+  "subtitle": "一场为老朋友与新朋友准备的身心礼物",
+  "hero": { "value": "3", "unit": "周年", "label": "11.15 – 11.30 · 店庆感恩月" },
+  "points": ["阴瑜伽公开课 免费体验", "老会员续卡 加赠 30 天", "带朋友同行 各得一节私教"],
+  "offers": [
+    { "name": "年卡·店庆价", "price": "3280", "original": "日常价 ¥4680", "note": "限前 30 名", "tag": "限量" },
+    { "name": "10 次体验卡", "price": "699", "original": "日常价 ¥980" }
+  ],
+  "date": "11.15 — 11.30",
+  "location": "上海 · 静安区 XX 路 88 号 2F",
+  "contact": "预约电话 021-0000 0000",
+  "cta": "私信预约 · 名额有限",
+  "footnote": "价格以门店实际为准；体验课每人限 1 次"
+}

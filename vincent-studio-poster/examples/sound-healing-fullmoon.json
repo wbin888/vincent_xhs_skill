@@ -1,0 +1,37 @@
+{
+  "style": "aura",
+  "output_name": "demo-sound-healing",
+  "brand": {
+    "name": "一苇身心",
+    "name_en": "REED · SOUND & SOUL"
+  },
+  "eyebrow": "Full Moon Sound Bath",
+  "title": "满月**颂钵**之夜",
+  "subtitle": "在声音的振动里 安放疲惫的身心",
+  "points": [
+    "喜马拉雅颂钵",
+    "水晶钵冥想",
+    "呼吸与身体扫描"
+  ],
+  "offers": [
+    {
+      "name": "单人票",
+      "price": "268"
+    },
+    {
+      "name": "双人同行",
+      "price": "468",
+      "tag": "推荐"
+    }
+  ],
+  "date": "11.15 SAT · 19:30",
+  "location": "北京 · 朝阳区 XX 艺术空间",
+  "cta": "限 16 席 · 私信预约",
+  "footnote": "本活动为放松体验，不替代任何医疗诊断与治疗",
+  "ratios": [
+    "3:4",
+    "9:16",
+    "1:1",
+    "16:9"
+  ]
+}

@@ -2,6 +2,8 @@
 
 > 小红书爆款封面 & 高转化招生海报 **提示词生成 Skill** · 21 种视觉风格 · 3:4 竖版（可扩展 4:3 / 16:9）
 
+> 本仓库还包含 **[vincent-studio-poster](#vincent-studio-poster工作室活动海报)**：瑜伽/健身/普拉提/康复/心身灵/音乐疗愈工作室的店庆、促销、节假日活动海报，直接输出 3:4、9:16、1:1、16:9 四规格 PNG。
+
 发一张人物照和一段文案，它会读取照片色调、提炼文案重点、推荐最合适的风格，再一步步问清细节，最后输出一段可直接复制给生图模型（Nano Banana / GPT-4o / 即梦 / Flux / Midjourney）的完整提示词。
 
 - [快速开始](#快速开始)
@@ -238,6 +240,45 @@ vincent_xhs_skill/
 
 **可以不露脸吗？**
 选风格 17（纯文本版），上传一张色调参考图即可，也可以只在角落放一个小头像。
+
+## vincent-studio-poster（工作室活动海报）
+
+为**瑜伽馆、健身房、普拉提馆、运动康复馆、心身灵工作室、音乐疗愈/颂钵工作室**制作店庆、开业、促销（双11/618/会员日）、节假日活动海报。与上面的提示词 Skill 不同，它会**直接出图**：HTML 精确排版 + Chrome 无头截图，中文、价格、Logo 零错字，一次输出四种规格。
+
+**三种用法**
+
+| 你提供 | 它会做 |
+|---|---|
+| 活动方案/文案 | 提炼四层文案 → 推荐风格 → 出图 |
+| 方案 + 照片 / Logo / 二维码 | 同上，并按 Logo、照片校准配色 |
+| 只有想法（馆型、节日、目标） | 先给 3 套推广方案（稳妥/爆发/情感），你确认后出图 |
+
+**规格**：3:4（1242×1656，小红书）· 9:16（1080×1920，抖音/朋友圈）· 1:1（1080×1080，社群/团购）· 16:9（1920×1080，B 站/门店屏）。
+
+**8 种风格**：`linen` 晨光亚麻（瑜伽）· `quiet` 静奢极简（普拉提）· `power` 能量大字报（健身/大促）· `pop` 多巴胺派对（开业/店庆）· `aura` 疗愈光晕（音乐疗愈/心身灵）· `festive` 东方节庆（春节/中秋/端午）· `clinic` 专业康复 · `editorial` 杂志周年刊。
+
+**安装**（与上面相同，换文件夹名即可）：
+
+```bash
+git clone https://github.com/wbin888/vincent_xhs_skill.git ~/vincent_xhs_skill
+mkdir -p ~/.claude/skills && cp -R ~/vincent_xhs_skill/vincent-studio-poster ~/.claude/skills/
+# Codex: ~/.codex/skills   Copilot CLI: ~/.copilot/skills   通用: ~/.agents/skills
+```
+
+**环境要求**：Python 3.8+（仅标准库）、本机 Chrome / Chromium / Edge、中文字体（macOS/Windows 自带；Linux 安装 `fonts-noto-cjk`）。检查：
+
+```bash
+python3 ~/.claude/skills/vincent-studio-poster/scripts/render_poster.py --doctor
+```
+
+**使用示例**：
+
+```
+用 vincent-studio-poster 帮我做瑜伽馆三周年店庆海报，11.15–11.30，年卡 3280（原价 4680），四个规格都要。
+用 vincent-studio-poster，我是颂钵工作室，中秋想做个活动，你先帮我出方案。
+```
+
+也可以直接渲染示例：`python3 scripts/render_poster.py examples/yoga-anniversary.json --sheet`。字段说明见 [`vincent-studio-poster/references/spec-schema.md`](vincent-studio-poster/references/spec-schema.md)。
 
 ## 致谢
 

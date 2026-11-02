@@ -1,0 +1,59 @@
+/* 杂志周年刊 — 店庆 / 周年庆 / 品牌升级 / 年度回顾 / 新店开业 */
+.st-editorial{--bg:#F1EEE7;--ink:#141414;--accent:#E2512B;--muted:rgba(20,20,20,.6);--line:#141414;--pmin:36rem;--base:3rem;
+  padding:5rem 6rem 5rem;gap:2.2rem 3.6rem;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  grid-template-rows:auto auto 1fr auto auto auto;
+  grid-template-areas:"brand brand" "head head" "photo photo" "pts off" "info info" "fine fine"}
+.st-editorial::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.18;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .3  0 0 0 0 .3  0 0 0 0 .3  0 0 0 .6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+
+/* masthead */
+.st-editorial .brand{border-bottom:.45rem solid var(--line);padding-bottom:1.2rem}
+.st-editorial .brand .bname{flex-direction:row;align-items:baseline;gap:1em}
+.st-editorial .brand .bname b{font-family:var(--serif);font-size:1.25em;font-weight:900;letter-spacing:.04em}
+.st-editorial .brand .bname small{font-family:var(--latin-serif);font-style:italic;font-size:.62em;letter-spacing:.06em;text-transform:none;opacity:1}
+.st-editorial .brand .btag{font-weight:700;opacity:1;color:var(--accent)}
+
+.st-editorial .headline{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:2rem;align-items:end}
+.st-editorial .eyebrow{grid-column:1/-1;font-family:var(--latin-sans);font-weight:700;letter-spacing:.3em;border-bottom:1px solid var(--line);padding-bottom:.6em;margin-bottom:.4em}
+.st-editorial .title{grid-column:1/-1;font-family:var(--serif);font-weight:900;font-size:calc(4.2em * var(--tk,1));line-height:1.08;letter-spacing:-.01em}
+.st-editorial .title em{color:var(--accent)}
+.st-editorial .subtitle{grid-column:1/-1;font-family:var(--serif);font-style:italic;font-size:.8em}
+
+.st-editorial .photo .frame img{filter:saturate(.85) contrast(1.05)}
+.st-editorial .photo.ph .frame{background:
+  repeating-linear-gradient(90deg,transparent 0 6rem,rgba(20,20,20,.06) 6rem 6.1rem),
+  linear-gradient(135deg,#D9D3C7,#BDB4A4)}
+
+/* giant multiply numeral over the photo */
+.st-editorial .hero{grid-area:photo;align-self:end;justify-self:start;z-index:2;mix-blend-mode:multiply;color:var(--accent);margin:0 0 -1.6rem -1rem;align-items:flex-end}
+.st-editorial .hero .hv{font-family:var(--latin-serif);font-size:11em;font-weight:900;line-height:.78;letter-spacing:-.06em}
+.st-editorial .hero .hu{font-family:var(--serif);font-size:1.6em;font-weight:900}
+.st-editorial .hero .hl{display:none}
+
+.st-editorial .points{gap:0;border-top:.3rem solid var(--line)}
+.st-editorial .points li{padding:.6em 0;border-bottom:1px solid rgba(20,20,20,.3);font-family:var(--serif);font-weight:700;font-size:.82em}
+.st-editorial .points li i{color:var(--accent);font-family:var(--latin-sans);font-weight:900}
+.st-editorial .points em{color:var(--accent)}
+
+.st-editorial .offers{grid-template-columns:minmax(0,1fr);gap:0;border-top:.3rem solid var(--line);align-content:start}
+.st-editorial .offer{display:grid;grid-template-columns:1fr auto;grid-template-areas:"name price" "note orig";column-gap:1em;padding:.6em 0;border-bottom:1px solid rgba(20,20,20,.3)}
+.st-editorial .offer .on{grid-area:name;font-family:var(--serif)}
+.st-editorial .offer .op{grid-area:price;font-family:var(--latin-serif);color:var(--accent);font-size:1.5em;text-align:right}
+.st-editorial .offer .oo{grid-area:orig;text-align:right}
+.st-editorial .offer .onote{grid-area:note}
+.st-editorial .offer .otag{position:absolute;right:0;top:-1.3em;background:var(--accent);color:#fff;border-radius:0}
+
+.st-editorial .info{border-top:.45rem solid var(--line);padding-top:1.4rem}
+.st-editorial .info .meta .date{font-family:var(--latin-sans);letter-spacing:.04em}
+.st-editorial .info .cta{background:var(--ink);color:var(--bg);border-radius:0;letter-spacing:.14em}
+
+.st-editorial.ra-tall{--base:3.3rem;--pmin:66rem;padding:6rem 6rem 5rem}
+.st-editorial.ra-square{--base:2.5rem;--pmin:0;padding:4.5rem 5rem;gap:1.6rem 3.4rem;
+  grid-template-columns:42rem minmax(0,1fr);grid-template-rows:auto auto 1fr auto auto;
+  grid-template-areas:"brand brand" "photo head" "photo pts" "photo off" "info info"}
+.st-editorial.ra-square .hero .hv{font-size:8em}
+.st-editorial.ra-square .fine{display:none}
+.st-editorial.ra-wide{--base:2.7rem;--pmin:0;padding:5rem 7rem;gap:2rem 5rem;
+  grid-template-columns:72rem minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto auto 1fr auto auto;
+  grid-template-areas:"brand brand brand" "photo head head" "photo pts off" "photo info info" "photo fine fine"}

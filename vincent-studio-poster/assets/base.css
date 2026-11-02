@@ -1,0 +1,106 @@
+/* ==========================================================================
+   vincent-studio-poster · base layout engine
+   1rem = 1% of the canvas short side (set on <html> by render_poster.py)
+   Text sizes inside the poster use em, so the auto-fit script can scale all
+   text through --k without touching spacing.
+   ========================================================================== */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;overflow:hidden;background:#fff}
+body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+img{display:block}
+
+:root{
+  --sans:"PingFang SC","HarmonyOS Sans SC","Source Han Sans SC","Noto Sans CJK SC","Noto Sans SC","Microsoft YaHei","WenQuanYi Zen Hei",sans-serif;
+  --serif:"Songti SC","Source Han Serif SC","Noto Serif CJK SC","Noto Serif SC","STSong","SimSun",serif;
+  --latin-serif:"Didot","Bodoni 72","Playfair Display","Cormorant Garamond","Noto Serif Display","Georgia",var(--serif);
+  --latin-sans:"Helvetica Neue","Avenir Next","Inter","Arial",var(--sans);
+  --condensed:"Oswald","Bebas Neue","DIN Condensed","Impact","Arial Narrow",var(--sans);
+}
+
+.poster{
+  position:relative;width:100%;height:100%;overflow:hidden;
+  display:grid;
+  background:var(--bg);color:var(--ink);
+  font-family:var(--sans);
+  font-size:calc(var(--base) * var(--k,1));
+  --base:2.9rem;
+}
+.ra-tall{--base:3.1rem}
+.ra-square{--base:2.45rem}
+.ra-wide{--base:2.6rem}
+
+.poster > *{position:relative;z-index:1;min-width:0}
+.poster > .deco{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.deco > i{position:absolute;display:block;font-style:normal}
+.deco .d1{display:none}
+
+.brand{grid-area:brand}
+.headline{grid-area:head}
+.hero{grid-area:hero}
+.points{grid-area:pts}
+.offers{grid-area:off}
+.photo{grid-area:photo}
+.info{grid-area:info}
+.fine{grid-area:fine}
+
+/* ---------- brand ---------- */
+.brand{display:flex;align-items:center;gap:1.4rem}
+.brand .logo{height:2.4em;width:auto;max-width:12em;object-fit:contain}
+.brand .bname{display:flex;flex-direction:column;line-height:1.15}
+.brand .bname b{font-size:.82em;font-weight:700;letter-spacing:.06em}
+.brand .bname small{font-size:.5em;letter-spacing:.22em;text-transform:uppercase;opacity:.75}
+.brand .btag{margin-left:auto;font-size:.5em;letter-spacing:.25em;text-transform:uppercase;opacity:.75;text-align:right}
+
+/* ---------- headline ---------- */
+.headline{display:flex;flex-direction:column;gap:.45em}
+.eyebrow{font-size:.62em;letter-spacing:.28em;text-transform:uppercase;font-weight:600}
+.title{font-size:calc(3.3em * var(--tk,1));line-height:1.1;font-weight:900;max-width:100%;overflow:visible}
+.title .l{display:block;white-space:nowrap}
+.title em{font-style:normal}
+.subtitle{font-size:.86em;line-height:1.45;opacity:.88}
+.subtitle em,.points em,.offer em{font-style:normal;font-weight:700}
+
+/* ---------- hero (big number) ---------- */
+.hero{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:.25em;line-height:.95}
+.hero .hv{font-size:4.6em;font-weight:900;letter-spacing:-.03em}
+.hero .hu{font-size:1.35em;font-weight:800}
+.hero .hl{flex-basis:100%;font-size:.66em;letter-spacing:.12em;margin-top:.5em;opacity:.85;line-height:1.3}
+
+/* ---------- points ---------- */
+.points{align-self:start;list-style:none;display:flex;flex-direction:column;gap:.55em}
+.points li{display:flex;align-items:baseline;gap:.6em;font-size:.95em;line-height:1.35}
+.points li i{font-style:normal;font-size:.72em;font-weight:700;flex-shrink:0}
+
+/* ---------- offers ---------- */
+.offers{align-self:start;display:grid;gap:1.4rem;grid-template-columns:repeat(var(--n,1),minmax(0,1fr))}
+.offer{position:relative;display:flex;flex-direction:column;gap:.15em;line-height:1.2}
+.offer .otag{align-self:flex-start;font-size:.5em;font-weight:700;letter-spacing:.1em;padding:.25em .7em;border-radius:99em}
+.offer .on{font-size:.74em;font-weight:700}
+.offer .op{font-size:1.9em;font-weight:900;letter-spacing:-.02em;line-height:1.05}
+.offer .op small{font-size:.45em;margin-right:.08em;font-weight:700}
+.offer .oo{font-size:.55em;text-decoration:line-through;opacity:.6}
+.offer .onote{font-size:.56em;opacity:.85}
+
+/* ---------- info / footer ---------- */
+.info{display:flex;align-items:center;gap:2.4rem}
+.info .meta{display:flex;flex-direction:column;gap:.3em;flex:1;min-width:0}
+.info .meta p{font-size:.66em;line-height:1.35}
+.info .meta .date{font-size:.9em;font-weight:800}
+.info .cta{font-size:.78em;font-weight:800;padding:.7em 1.4em;border-radius:99em;white-space:nowrap;flex-shrink:0}
+.info .qr{display:flex;flex-direction:column;align-items:center;gap:.3em;flex-shrink:0}
+.info .qr img{width:3.6em;height:3.6em;object-fit:contain;background:#fff;padding:.2em;border-radius:.3em}
+.info .qr small{font-size:.42em;letter-spacing:.1em}
+.fine{font-size:.42em;opacity:.6;line-height:1.4}
+
+/* ---------- photo ---------- */
+.photo{position:relative;min-height:var(--pmin,20rem)}
+.photo .frame{position:absolute;inset:0;overflow:hidden}
+.photo .frame img{width:100%;height:100%;object-fit:cover;object-position:var(--focus,50% 30%)}
+
+/* grain texture helper */
+.grain::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:3;opacity:.22;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .45  0 0 0 0 .4  0 0 0 0 .35  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+
+/* circular frames: always a true circle that fits the cell */
+.photo.circle{container-type:size;display:grid;place-items:center}
+.photo.circle .frame{position:relative;inset:auto;width:min(100cqw,100cqh);height:min(100cqw,100cqh);border-radius:50%}

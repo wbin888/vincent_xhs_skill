@@ -1,0 +1,45 @@
+{
+  "style": "quiet",
+  "output_name": "demo-pilates-member-day",
+  "brand": {
+    "name": "澄 PILATES",
+    "name_en": "CHENG PILATES",
+    "tagline": "Reformer · Private"
+  },
+  "eyebrow": "MEMBER DAY · 会员日",
+  "title": "把身体\n**交还**给自己",
+  "subtitle": "器械普拉提私教会员日 · 体态评估免费开放",
+  "hero": {
+    "value": "8",
+    "unit": "折",
+    "label": "私教课包限时"
+  },
+  "points": [
+    "专业体态评估",
+    "1v1 定制课程",
+    "核心床小班"
+  ],
+  "offers": [
+    {
+      "name": "私教 20 节",
+      "price": "8960",
+      "original": "¥11200",
+      "note": "赠体态评估报告"
+    },
+    {
+      "name": "小班 10 节",
+      "price": "1880",
+      "original": "¥2350"
+    }
+  ],
+  "date": "12.06 SAT — 12.08 MON",
+  "location": "杭州 · 滨江 XX 中心 3F",
+  "cta": "预约体验",
+  "footnote": "活动价仅限活动期间购买；名额以实际预约为准",
+  "ratios": [
+    "3:4",
+    "9:16",
+    "1:1",
+    "16:9"
+  ]
+}

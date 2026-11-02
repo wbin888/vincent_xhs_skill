@@ -1,0 +1,45 @@
+{
+  "style": "clinic",
+  "output_name": "demo-rehab-posture",
+  "brand": {
+    "name": "动衡运动康复",
+    "name_en": "BALANCE SPORTS REHAB",
+    "tagline": "专业 · 循证"
+  },
+  "eyebrow": "开学季 · 青少年体态筛查",
+  "title": "体态好\n**站出**自信",
+  "subtitle": "高低肩 · 圆肩驼背 · 足弓评估，一次看清",
+  "hero": {
+    "value": "30",
+    "unit": "分钟",
+    "label": "一对一体态评估"
+  },
+  "points": [
+    "专业评估设备",
+    "康复师一对一讲解",
+    "出具个性化训练建议"
+  ],
+  "offers": [
+    {
+      "name": "体态评估",
+      "price": "99",
+      "original": "原价 ¥299",
+      "tag": "开学价"
+    },
+    {
+      "name": "评估+4 次训练",
+      "price": "999",
+      "original": "原价 ¥1396"
+    }
+  ],
+  "date": "8.20 — 9.10",
+  "location": "广州 · 天河区 XX 大厦 12F",
+  "cta": "电话预约",
+  "footnote": "本服务为运动康复训练，非医疗诊疗；如有疾病请先就医",
+  "ratios": [
+    "3:4",
+    "9:16",
+    "1:1",
+    "16:9"
+  ]
+}
