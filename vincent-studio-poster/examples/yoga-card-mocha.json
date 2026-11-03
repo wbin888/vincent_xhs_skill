@@ -1,0 +1,19 @@
+{
+  "style": "mocha",
+  "output_name": "demo-yoga-card-mocha",
+  "brand": {"name": "棠瑜伽", "name_en": "TANG YOGA"},
+  "script": "Beauty",
+  "title": "遇见更好的自己",
+  "subtitle": "瑜伽季卡 · 年卡限时开放",
+  "offers_title": "CARD PRICE",
+  "offers": [
+    {"name": "季卡", "price": "1288", "tag": "不限次", "original": "¥1980", "note": "周一至周日 09:00—21:30\n团课 · 阴瑜伽 · 流瑜伽"},
+    {"name": "年卡", "price": "3688", "tag": "送 2 个月", "original": "¥5980", "note": "全时段可约 · 可停卡 60 天"}
+  ],
+  "points": ["老学员续卡加赠 1 个月", "带新朋友各得 2 节私教体验"],
+  "cta": "前 30 名办卡 · 加赠瑜伽服一套",
+  "date": "12.01 — 12.31",
+  "location": "南京 · 鼓楼 XX 大厦 3F",
+  "footnote": "活动最终解释权归本馆所有",
+  "ratios": ["3:4", "9:16", "1:1", "16:9"]
+}

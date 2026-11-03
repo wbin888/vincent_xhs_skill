@@ -1,0 +1,74 @@
+/* 摩卡分栏 · Mocha Split — 瑜伽 / 季卡年卡 / 课表 / 会员招募
+   brown gradient, translucent left column with script + title + boxed prices, full-height photo on the right, dark promo band */
+.st-mocha{--bg:#7A543D;--ink:#FBEFE3;--accent:#F2CFA6;--accent2:#5A3828;--box:#FBF1E6;--band:#2E1C13;--line:rgba(251,239,227,.3);
+  --pmin:0;--base:2.9rem;--col:58%;
+  background:linear-gradient(160deg,#A57A5C 0%,#7A543D 50%,#4E3122 100%);
+  --pl:6rem;padding:6rem 0 0 var(--pl);gap:2rem 4rem;
+  grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);
+  grid-template-rows:auto auto auto auto 1fr auto auto;
+  grid-template-areas:"brand photo" "head photo" "hero photo" "off photo" "pts photo" "info info" "fine fine"}
+
+.st-mocha .deco .d2{left:0;top:0;bottom:0;width:var(--col);background:linear-gradient(180deg,rgba(46,28,19,.28),rgba(46,28,19,.42))}
+.st-mocha .photo{margin:-6rem 0 -2rem 0}
+.st-mocha .photo .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(46,28,19,.35),rgba(46,28,19,0) 30%)}
+.st-mocha .photo.ph .frame{background:
+  radial-gradient(ellipse 40% 28% at 55% 40%,rgba(255,230,200,.45),transparent 70%),
+  radial-gradient(circle at 55% 62%,transparent 0 26%,rgba(255,240,220,.3) 26.2% 26.6%,transparent 26.8%),
+  linear-gradient(180deg,#C49A78 0%,#8E6248 100%)}
+
+.st-mocha .headline{gap:.3em}
+.st-mocha .headline .script{display:block;font-size:2.2em;color:var(--accent);margin-bottom:-.15em}
+.st-mocha .eyebrow{font-size:.5em;letter-spacing:.4em;opacity:.8}
+.st-mocha .title{font-size:calc(2.9em * var(--tk,1));font-weight:800;letter-spacing:.06em}
+.st-mocha .title em{color:var(--accent)}
+.st-mocha .subtitle{font-size:.62em;letter-spacing:.5em;opacity:.85}
+
+.st-mocha .hero{color:var(--accent)}
+.st-mocha .hero .hv{font-size:3.6em}
+
+/* price blocks: heading line, cream box with big price, schedule lines */
+.st-mocha .offers{grid-template-columns:minmax(0,1fr);gap:1.6em}
+.st-mocha .offers[data-title]::before{content:attr(data-title);font-size:.56em;letter-spacing:.4em;color:var(--accent)}
+.st-mocha .offer{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"name name" "price tag" "price orig" "note note";column-gap:1em;row-gap:0;align-items:center}
+.st-mocha .offer::before{content:"";grid-row:2/4;grid-column:1/3;align-self:stretch;justify-self:stretch;background:var(--box);border-radius:.8rem;min-height:2em}
+.st-mocha .offer .on{grid-area:name;display:flex;align-items:center;gap:.8em;font-size:.72em;font-weight:700;letter-spacing:.2em;margin-bottom:.5em}
+.st-mocha .offer .on::after{content:"";flex:1;height:1px;background:var(--line)}
+.st-mocha .offer .op{grid-area:price;z-index:1;color:var(--accent2);font-size:1.7em;padding:.12em .4em}
+.st-mocha .offer .otag{grid-area:tag;z-index:1;position:static;align-self:end;justify-self:end;background:none;color:var(--accent2);font-size:.46em;padding:0 1.2em 0 0;border-radius:0}
+.st-mocha .offer .oo{grid-area:orig;z-index:1;align-self:start;justify-self:end;color:var(--accent2);font-size:.44em;padding-right:1.2em}
+.st-mocha .offer .onote{grid-area:note;font-size:.52em;line-height:1.6;margin-top:.5em;opacity:.85}
+.st-mocha.ra-portrait .offers:has(.offer:nth-child(3)) .onote{display:none}
+
+.st-mocha .points{align-self:end;gap:.3em;padding-bottom:1rem}
+.st-mocha .points li{font-size:.58em;opacity:.85}
+.st-mocha .points li i{color:var(--accent)}
+
+/* dark promo band */
+.st-mocha .info{margin-left:calc(-1 * var(--pl));z-index:2;background:var(--band);padding:2rem 6rem;gap:2.4rem}
+.st-mocha .info .meta .date{color:var(--accent)}
+.st-mocha .info .cta{order:-1;background:none;padding:0;font-size:1em;letter-spacing:.12em;color:var(--accent);white-space:normal;flex-shrink:1;max-width:45%}
+.st-mocha .fine{margin-left:calc(-1 * var(--pl));z-index:2;background:var(--band);margin-top:-2rem;padding:0 6rem 1.8rem;opacity:1;color:rgba(251,239,227,.5)}
+
+/* 9:16 */
+.st-mocha.ra-tall{--base:3.1rem;--col:60%;padding:7rem 0 0 var(--pl);grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}
+.st-mocha.ra-tall .photo{margin:-7rem 0 -2rem 0}
+.st-mocha.ra-tall .info{flex-wrap:wrap;padding:2.4rem 6rem}
+.st-mocha.ra-tall .info .cta{max-width:none;flex-basis:100%}
+
+/* 1:1 */
+.st-mocha.ra-square{--base:2.35rem;--col:60%;--pl:4.5rem;padding:4.5rem 0 0 var(--pl);gap:1.2rem 3.5rem;
+  grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);grid-template-rows:auto auto 1fr auto;
+  grid-template-areas:"brand photo" "head photo" "off photo" "info info"}
+.st-mocha.ra-square .photo{margin:-4.5rem 0 -1.2rem 0}
+.st-mocha.ra-square .hero,.st-mocha.ra-square .points,.st-mocha.ra-square .fine,.st-mocha.ra-square .onote{display:none}
+.st-mocha.ra-square .offers{gap:.9em}
+.st-mocha.ra-square .info{padding:1.6rem 4.5rem}
+
+/* 16:9 */
+.st-mocha.ra-wide{--base:2.6rem;--col:62%;--pl:7rem;padding:5rem 0 0 var(--pl);gap:1.4rem 5rem;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto auto auto 1fr auto;
+  grid-template-areas:"brand off photo" "head off photo" "hero off photo" "pts off photo" "info info info"}
+.st-mocha.ra-wide .photo{margin:-5rem 0 -1.4rem 0}
+.st-mocha.ra-wide .offers{align-self:center;padding-right:1rem}
+.st-mocha.ra-wide .fine{display:none}
+.st-mocha.ra-wide .info{padding:1.8rem 7rem}

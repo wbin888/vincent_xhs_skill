@@ -44,7 +44,7 @@
 
 | 字段 | 类型 | 说明 |
 |---|---|---|
-| `style` | string | `linen` `quiet` `power` `pop` `aura` `festive` `clinic` `editorial`，见 [styles.md](styles.md) |
+| `style` | string | `linen` `quiet` `power` `pop` `aura` `festive` `clinic` `editorial` `numeral` `ruby` `latte` `doodle` `noir` `mocha`，见 [styles.md](styles.md) |
 | `variant` | string | `festive`: `red`/`moon`/`jade`；`pop`: `sunny`/`berry`/`mint`；`aura`: `night`/`dawn`。省略取第一个 |
 | `ratios` | string[] | 默认四种全出；命令行 `--ratios` 优先 |
 | `output_name` | string | 输出文件名前缀，默认 spec 文件名 |
@@ -56,7 +56,10 @@
 | `subtitle` | string | 副标题，支持 `**高亮**` |
 | `hero` | object | 视觉锚点：`value`（大数字/字）、`unit`（单位）、`label`（说明） |
 | `points` | string[] | 卖点，最多 4 条，建议 3 条；支持 `**高亮**` |
-| `offers` | object[] | 价格卡，最多 3 个：`name` `price` `original` `note` `tag` `currency` |
+| `offers` | object[] | 价格卡，最多 3 个（列表型风格 quiet/numeral/ruby/latte/noir/mocha 最多 4 个）：`name` `price` `original` `note` `tag` `currency` `unit` |
+| `offers[].unit` | string | 价格后的小字单位，如 `/10节`、`/月` |
+| `script` | string | 手写英文装饰字（如 `Beauty`、`Pilates`），latte/noir/mocha 显示 |
+| `points_title` / `offers_title` | string | 要点/价目区块标题（numeral/ruby/latte/doodle/noir/mocha 显示） |
 | `offers[].price` | string | 纯数字自动加 `¥`（`currency` 可改）；非数字原样显示（如 `"免费"`、`"5 折"`） |
 | `date` `location` `contact` | string | 行动信息区 |
 | `cta` | string | 行动按钮文字，如 `扫码预约` `私信报名` |
@@ -80,6 +83,12 @@
 | festive | `bg` `ink` `accent`（金） `accent2` `deep` |
 | clinic | `bg` `ink` `accent` `accent2` `card` `line` |
 | editorial | `bg` `ink` `accent` `muted` `line` |
+| numeral | `bg` `ink` `accent` `accent2` `panel` `bar` `line` |
+| ruby | `bg` `ink` `accent` `accent2` `deep` `card` `line` `onred` |
+| latte | `bg` `ink` `accent` `accent2` `pill` `line` `onphoto` |
+| doodle | `bg` `ink` `accent`（黄） `accent2` `teal` `box` |
+| noir | `bg` `ink` `accent`（薄荷） `accent2` `line` |
+| mocha | `bg` `ink` `accent` `accent2` `box` `band` `line` |
 
 ## 布局类名（写 `custom_css` 时使用）
 

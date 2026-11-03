@@ -1,0 +1,98 @@
+/* 手绘插画 · Doodle — 瑜伽 / 亲子 / 社群活动 / 新手营 / 秋游
+   cream paper, hand-lettered title, yellow ribbon, illustrated frame, bordered boxes with yellow tabs, lightbulb bullets */
+.st-doodle{--bg:#FBF3E2;--ink:#4B3A2B;--accent:#F5C443;--accent2:#EE8A6A;--teal:#6FA59A;--box:#FFFDF6;
+  --pmin:34rem;--base:2.9rem;
+  background:radial-gradient(circle,rgba(75,58,43,.08) 1.5px,transparent 1.8px) 0 0/3.2rem 3.2rem,var(--bg);
+  padding:5rem 6.5rem 4.5rem;gap:2.6rem 3rem;
+  grid-template-columns:minmax(0,1fr);
+  grid-template-rows:auto auto 1fr auto auto auto auto;
+  grid-template-areas:"brand" "head" "photo" "pts" "off" "info" "fine";
+  font-family:var(--hand)}
+
+/* scattered doodles */
+.st-doodle .deco .d2,.st-doodle .deco .d3,.st-doodle .deco .d4{font-family:var(--latin-sans);line-height:1}
+.st-doodle .deco .d2::before{content:"✦";font-size:6rem;color:var(--accent)}
+.st-doodle .deco .d2{top:16%;left:5%}
+.st-doodle .deco .d3::before{content:"✿";font-size:5rem;color:var(--accent2)}
+.st-doodle .deco .d3{top:13%;right:6%;transform:rotate(14deg)}
+.st-doodle .deco .d4{bottom:3%;right:4%;width:14rem;height:5rem;border-bottom:.45rem dashed var(--teal);border-radius:0 0 50% 50%;opacity:.6}
+
+.st-doodle .brand{justify-content:center}
+.st-doodle .brand .bname{align-items:center}
+.st-doodle .brand .btag{display:none}
+
+.st-doodle .headline{align-items:center;text-align:center;gap:.5em}
+.st-doodle .eyebrow{font-size:.6em;letter-spacing:.3em;color:var(--teal)}
+.st-doodle .title{font-family:var(--hand);font-weight:700;font-size:calc(3.7em * var(--tk,1));letter-spacing:.06em;line-height:1.15;
+  -webkit-text-stroke:.025em var(--ink);text-shadow:.07em .07em 0 var(--accent)}
+.st-doodle .title em{color:var(--accent2)}
+.st-doodle .subtitle{display:inline-block;background:var(--accent);color:var(--ink);font-weight:700;font-size:.78em;letter-spacing:.12em;opacity:1;
+  padding:.4em 2.2em;clip-path:polygon(0 0,100% 0,96% 50%,100% 100%,0 100%,4% 50%)}
+
+/* illustrated frame (photo or CSS scene) */
+.st-doodle .photo .frame{inset:0 1.2rem 1.2rem 0;border:.45rem solid var(--ink);border-radius:4rem 5rem 3.6rem 5.4rem / 4.6rem 3.8rem 5.2rem 4rem;
+  box-shadow:1.2rem 1.2rem 0 var(--accent)}
+.st-doodle .photo.ph .frame{background:
+  radial-gradient(circle at 22% 30%,var(--accent2) 0 5%,transparent 5.3%),
+  radial-gradient(circle at 30% 22%,var(--accent) 0 5.5%,transparent 5.8%),
+  radial-gradient(circle at 38% 32%,var(--teal) 0 4.6%,transparent 4.9%),
+  linear-gradient(var(--ink),var(--ink)) 26% 38%/2px 30% no-repeat,
+  linear-gradient(var(--ink),var(--ink)) 31% 30%/2px 36% no-repeat,
+  radial-gradient(circle at 80% 26%,#FFE7A3 0 9%,transparent 9.4%),
+  radial-gradient(ellipse 70% 30% at 30% 100%,#9CC7B4 0 98%,transparent 100%),
+  radial-gradient(ellipse 70% 34% at 85% 100%,#B9D9C5 0 98%,transparent 100%),
+  linear-gradient(180deg,#FFF6DF 0%,#FDEBC8 100%)}
+
+/* bordered boxes with tab headings */
+.st-doodle .points,.st-doodle .offers{position:relative;border:.35rem solid var(--ink);border-radius:2.4rem;background:var(--box);padding:1.3em 1.2em .9em}
+.st-doodle .points[data-title],.st-doodle .offers[data-title]{margin-top:1.2rem}
+.st-doodle .points[data-title]::before,.st-doodle .offers[data-title]::before{content:attr(data-title);position:absolute;top:0;left:1.4em;transform:translateY(-55%);
+  background:var(--accent);border:.3rem solid var(--ink);border-radius:99em;padding:.15em 1.1em;font-size:.68em;font-weight:700;letter-spacing:.14em}
+.st-doodle .points{gap:.5em}
+.st-doodle .points li{font-size:.76em;align-items:center}
+.st-doodle .points li i{font-size:0;width:1.2rem;flex:0 0 2.6rem;height:2.6rem;background:var(--accent2);
+  -webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2a7 7 0 0 0-4 12.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3A7 7 0 0 0 12 2zM9 20h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z'/></svg>") center/contain no-repeat;
+  mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2a7 7 0 0 0-4 12.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3A7 7 0 0 0 12 2zM9 20h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z'/></svg>") center/contain no-repeat}
+.st-doodle .points em,.st-doodle .subtitle em,.st-doodle .offer em{background:linear-gradient(transparent 55%,rgba(245,196,67,.75) 55%)}
+
+.st-doodle .offers{gap:0}
+.st-doodle .offer{align-items:center;text-align:center;padding:.2em .6em}
+.st-doodle .offer + .offer{border-left:.25rem dashed rgba(75,58,43,.35)}
+.st-doodle .offer .on{font-size:.7em}
+.st-doodle .offer .op{color:var(--accent2);font-family:var(--latin-sans);font-size:1.6em}
+.st-doodle .offer .oo{font-size:.5em}
+.st-doodle .offer .onote{font-size:.5em}
+.st-doodle .offer .otag{position:absolute;top:-.4em;right:.2em;transform:rotate(8deg);background:var(--teal);color:#fff;font-size:.42em}
+
+.st-doodle .info .meta .date{font-family:var(--hand);font-size:.86em}
+.st-doodle .info .cta{background:var(--teal);color:#fff;border:.3rem solid var(--ink);box-shadow:.4rem .4rem 0 var(--ink)}
+.st-doodle .info .qr img{border:.3rem solid var(--ink);border-radius:1rem}
+.st-doodle .fine{text-align:center}
+
+/* 9:16 */
+.st-doodle.ra-tall{--base:3.1rem;--pmin:44rem;padding:6.5rem 6.5rem 5rem}
+
+/* 1:1 */
+.st-doodle.ra-square{--base:2.3rem;--pmin:0;padding:4.5rem 5rem 4rem;gap:1.8rem 3.5rem;
+  grid-template-columns:minmax(0,.9fr) minmax(0,1fr);grid-template-rows:auto auto auto 1fr auto;
+  grid-template-areas:"brand brand" "head head" "photo pts" "photo off" "info info"}
+.st-doodle.ra-square .points{align-self:stretch}
+.st-doodle.ra-square .offers{align-self:start}
+.st-doodle.ra-square .fine{display:none}
+.st-doodle.ra-square .offers,.st-doodle.ra-wide .offers{grid-template-columns:minmax(0,1fr)}
+.st-doodle.ra-square .offer,.st-doodle.ra-wide .offer{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"name price" "note orig";text-align:left;padding:.35em 0;column-gap:1em}
+.st-doodle.ra-square .offer + .offer,.st-doodle.ra-wide .offer + .offer{border-left:0;border-top:.25rem dashed rgba(75,58,43,.35)}
+.st-doodle.ra-square .offer .on,.st-doodle.ra-wide .offer .on{grid-area:name}
+.st-doodle.ra-square .offer .op,.st-doodle.ra-wide .offer .op{grid-area:price;font-size:1.3em;text-align:right}
+.st-doodle.ra-square .offer .onote,.st-doodle.ra-wide .offer .onote{grid-area:note}
+.st-doodle.ra-square .offer .oo,.st-doodle.ra-wide .offer .oo{grid-area:orig;text-align:right}
+.st-doodle.ra-square .offer .otag,.st-doodle.ra-wide .offer .otag{right:auto;left:40%;top:0}
+
+/* 16:9 */
+.st-doodle.ra-wide{--base:2.5rem;--pmin:0;padding:5rem 7rem 4rem;gap:2rem 4rem;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,.95fr);grid-template-rows:auto auto 1fr auto;
+  grid-template-areas:"brand brand photo" "head head photo" "pts off photo" "info info photo"}
+.st-doodle.ra-wide .points,.st-doodle.ra-wide .offers{align-self:start}
+.st-doodle.ra-wide .fine{display:none}
+.st-doodle.ra-wide .deco .d2{top:8%;left:3%}
+.st-doodle.ra-wide .deco .d3{top:auto;bottom:6%;right:auto;left:55%}

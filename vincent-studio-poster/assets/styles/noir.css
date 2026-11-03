@@ -1,0 +1,81 @@
+/* 墨夜手书 · Noir Brush — 普拉提 / 私教 / 高端 / 夜课
+   dark brown-black, warm-lit photo, giant brush calligraphy title, two-column price list, boxed spaced motto */
+.st-noir{--bg:#17120F;--ink:#EDE3D6;--accent:#A9DCC5;--accent2:#C8A27A;--line:rgba(237,227,214,.18);
+  --pmin:56rem;--base:3rem;
+  background:radial-gradient(ellipse 80% 50% at 50% 100%,#2A1F19 0%,#17120F 70%);
+  padding:5.5rem 7rem 4.5rem;gap:2.2rem 3rem;
+  grid-template-columns:minmax(0,1fr);
+  grid-template-rows:1fr auto auto auto auto auto;
+  grid-template-areas:"photo" "head" "pts" "off" "info" "fine"}
+
+.st-noir .photo{margin:-5.5rem -7rem 0}
+.st-noir .photo .frame{-webkit-mask:linear-gradient(180deg,#000 55%,transparent 98%);mask:linear-gradient(180deg,#000 55%,transparent 98%)}
+.st-noir .photo .frame img{filter:saturate(.9) contrast(1.05)}
+.st-noir .photo.ph .frame{background:
+  radial-gradient(ellipse 26% 30% at 66% 38%,rgba(255,196,140,.55),transparent 70%),
+  radial-gradient(ellipse 60% 40% at 66% 38%,rgba(200,140,90,.25),transparent 70%),
+  linear-gradient(90deg,transparent 0 30%,rgba(255,220,180,.06) 30% 31%,transparent 31% 58%,rgba(255,220,180,.06) 58% 59%,transparent 59%),
+  linear-gradient(180deg,#3A2A20 0%,#241A14 100%)}
+.st-noir .brand{grid-area:photo;align-self:start;z-index:2;color:var(--ink)}
+.st-noir .brand .bname b{letter-spacing:.2em}
+
+.st-noir .headline{margin-top:-14rem;z-index:2;gap:.2em}
+.st-noir .eyebrow{order:0;font-size:.5em;font-weight:500;letter-spacing:.5em;color:var(--accent2)}
+.st-noir .title{order:1;font-family:var(--brush);font-weight:400;color:var(--accent);font-size:calc(4.6em * var(--tk,1));line-height:1.08;letter-spacing:.02em;
+  text-shadow:0 .04em .3em rgba(0,0,0,.45)}
+.st-noir .title em{color:var(--ink)}
+.st-noir .headline .script{display:block;order:2;align-self:flex-end;margin:-.5em .4em 0 0;font-size:1.5em;color:var(--ink);transform:rotate(-6deg);opacity:.92}
+.st-noir .subtitle{order:3;font-size:.7em;letter-spacing:.2em;opacity:.75}
+
+.st-noir .points{flex-direction:row;flex-wrap:wrap;gap:.3em 0}
+.st-noir .points li{font-size:.58em;letter-spacing:.12em;opacity:.8}
+.st-noir .points li i{display:none}
+.st-noir .points li + li::before{content:"/";margin:0 .9em;color:var(--accent)}
+
+/* two-column price list */
+.st-noir .offers{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.6em 2.6em;padding:1.4em 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.st-noir .offers[data-title]::before{content:attr(data-title);grid-column:1/-1;font-size:.56em;letter-spacing:.5em;color:var(--accent2)}
+.st-noir .offer{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"name price" "note orig";column-gap:.8em;align-items:center;
+  border-left:.22em solid var(--accent);padding-left:.7em}
+.st-noir .offer .on{grid-area:name;font-size:.74em;font-weight:700;letter-spacing:.08em}
+.st-noir .offer .onote{grid-area:note;font-family:var(--latin-serif);font-style:italic;font-size:.46em;letter-spacing:.06em;opacity:.6}
+.st-noir .offer .op{grid-area:price;font-family:var(--latin-sans);font-size:1.25em;font-weight:700;color:var(--ink);display:flex;align-items:center;justify-content:flex-end}
+.st-noir .offer .op small:first-child{display:inline-grid;place-items:center;width:1.5em;height:1.5em;border:1px solid var(--accent);border-radius:50%;color:var(--accent);font-size:.4em;margin-right:.35em}
+.st-noir .offer .op .ou{align-self:flex-end;opacity:.6;margin:0 0 .3em .2em}
+.st-noir .offer .oo{grid-area:orig;font-size:.42em;text-align:right;opacity:.45}
+.st-noir .offer .otag{position:absolute;left:.7em;top:-1.4em;padding:0;background:none;color:var(--accent);font-size:.4em;letter-spacing:.3em}
+
+/* centered footer: info, QR, boxed motto */
+.st-noir .info{flex-direction:column;gap:1.4rem;text-align:center}
+.st-noir .info .meta{align-items:center}
+.st-noir .info .meta .date{letter-spacing:.14em;color:var(--accent2)}
+.st-noir .info .meta p{opacity:.85}
+.st-noir .info .qr{order:1}
+.st-noir .info .qr small{opacity:.7}
+.st-noir .info .cta{order:2;border:1px solid var(--ink);border-radius:0;font-weight:400;letter-spacing:.8em;padding:.6em .6em .6em 1.4em;font-size:.66em}
+.st-noir .fine{text-align:center;opacity:.45}
+
+/* 9:16 */
+.st-noir.ra-tall{--base:3.25rem;--pmin:78rem;padding:6rem 7rem 5rem}
+.st-noir.ra-tall .photo{margin:-6rem -7rem 0}
+.st-noir.ra-tall .headline{margin-top:-18rem}
+
+/* 1:1 & 16:9 — photo on the left, content right */
+.st-noir.ra-square{--base:2.4rem;--pmin:0;padding:4.5rem 5rem 4rem;gap:1.4rem 4rem;
+  grid-template-columns:36rem minmax(0,1fr);grid-template-rows:auto auto 1fr auto;
+  grid-template-areas:"photo head" "photo pts" "photo off" "photo info"}
+.st-noir.ra-square .photo,.st-noir.ra-wide .photo{margin:-4.5rem 0 -4rem -5rem}
+.st-noir.ra-square .photo .frame,.st-noir.ra-wide .photo .frame{-webkit-mask:linear-gradient(90deg,#000 60%,transparent);mask:linear-gradient(90deg,#000 60%,transparent)}
+.st-noir.ra-square .headline,.st-noir.ra-wide .headline{margin-top:0}
+.st-noir.ra-square .title{font-size:calc(3.6em * var(--tk,1))}
+.st-noir.ra-square .offers{align-self:center}
+.st-noir.ra-square .info,.st-noir.ra-wide .info{flex-direction:row;text-align:left}
+.st-noir.ra-square .info .meta,.st-noir.ra-wide .info .meta{align-items:flex-start}
+.st-noir.ra-square .fine{display:none}
+
+.st-noir.ra-wide{--base:2.6rem;--pmin:0;padding:5rem 7rem 4rem;gap:1.6rem 5rem;
+  grid-template-columns:76rem minmax(0,1fr);grid-template-rows:auto auto 1fr auto auto;
+  grid-template-areas:"photo head" "photo pts" "photo off" "photo info" "photo fine"}
+.st-noir.ra-wide .photo{margin:-5rem 0 -4rem -7rem}
+.st-noir.ra-wide .offers{align-self:center}
+.st-noir.ra-wide .fine{text-align:left}

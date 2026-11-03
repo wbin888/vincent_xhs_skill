@@ -1,0 +1,23 @@
+{
+  "style": "numeral",
+  "output_name": "demo-pilates-double11",
+  "brand": {"name": "栖木普拉提", "name_en": "QIMU PILATES", "tagline": "Reformer · Studio"},
+  "hero": {"value": "11.11", "label": "年度狂欢 · 全年最低价"},
+  "eyebrow": "DOUBLE 11 · 体态焕新季",
+  "title": "普拉提**宠粉**狂欢",
+  "subtitle": "器械 / 私教 / 小班卡 一次囤够",
+  "offers_title": "限时价目",
+  "offers": [
+    {"name": "器械小班 20 节", "price": "2580", "original": "¥3600", "note": "有效期 6 个月", "tag": "爆款"},
+    {"name": "私教 1v1 10 节", "price": "3980", "original": "¥5200", "note": "赠体态评估"},
+    {"name": "年卡 不限次", "price": "6980", "original": "¥9800", "note": "可转赠 1 次"},
+    {"name": "新人体验课", "price": "99", "original": "¥298"}
+  ],
+  "points": ["老带新各赠 2 节", "储值满 5000 再减 500"],
+  "date": "11.01 — 11.11",
+  "location": "杭州 · 滨江 XX 中心 2F",
+  "contact": "0571-8888 6666",
+  "qr_label": "扫码抢购",
+  "footnote": "活动价仅限活动期间购买；最终解释权以门店公示为准",
+  "ratios": ["3:4", "9:16", "1:1", "16:9"]
+}
