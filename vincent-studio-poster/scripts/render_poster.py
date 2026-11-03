@@ -46,7 +46,15 @@ STYLES = {
     "festive": "东方节庆（春节/元旦/中秋/国庆/端午；variant: red|moon|jade）",
     "clinic": "专业康复（运动康复/体态评估/产后修复/理疗）",
     "editorial": "杂志周年刊（店庆/周年庆/品牌升级/年度回顾）",
+    "numeral": "巨数焦糖（普拉提/双11/周年数字/卡项价目，图标信息栏）",
+    "ruby": "红韵礼遇（瑜伽/双11/年终/会员礼遇，白卡价目+原价划线）",
+    "latte": "奶咖焕新（普拉提/秋冬上新/体验课，弧形大图+巨价）",
+    "doodle": "手绘插画（瑜伽/亲子/社群/新手营，暖黄手绘信息框）",
+    "noir": "墨夜手书（普拉提/私教/高端，暗色+手写大字+双列价目）",
+    "mocha": "摩卡分栏（瑜伽/季卡年卡/课表，左栏价目+右侧人像）",
 }
+# styles whose offers render as a list (allow 4 rows instead of 3)
+LIST_STYLES = {"quiet", "numeral", "ruby", "latte", "noir", "mocha"}
 VARIANTS = {"festive": ["red", "moon", "jade"], "pop": ["sunny", "berry", "mint"], "aura": ["night", "dawn"]}
 
 CHROME_CANDIDATES = [
@@ -144,7 +152,7 @@ def build_html(spec, ratio, base_dir):
 
     brand = data.get("brand") or {}
     points = [p for p in (data.get("points") or []) if p][:4]
-    offers = [o for o in (data.get("offers") or []) if o][:3]
+    offers = [o for o in (data.get("offers") or []) if o][: 4 if style in LIST_STYLES else 3]
     hero = data.get("hero") or None
     photo = resolve_src(data.get("photo"), base_dir)
     logo = resolve_src(brand.get("logo"), base_dir)
@@ -182,6 +190,8 @@ def build_html(spec, ratio, base_dir):
     title = str(data.get("title", "")).replace("|", "\n")
     lines = "".join(f'<span class="l">{rich(l)}</span>' for l in title.split("\n") if l.strip())
     hd = '<div class="headline">'
+    if data.get("script"):
+        hd += f'<p class="script">{esc(data["script"])}</p>'
     if data.get("eyebrow"):
         hd += f'<p class="eyebrow">{rich(data["eyebrow"])}</p>'
     hd += f'<h1 class="title">{lines}</h1>'
@@ -202,7 +212,8 @@ def build_html(spec, ratio, base_dir):
 
     if points:
         items = "".join(f'<li><i>{i:02d}</i><span>{rich(p)}</span></li>' for i, p in enumerate(points, 1))
-        parts.append(f'<ul class="points" style="--n:{len(points)}">{items}</ul>')
+        pt = f' data-title="{esc(data["points_title"])}"' if data.get("points_title") else ""
+        parts.append(f'<ul class="points" style="--n:{len(points)}"{pt}>{items}</ul>')
 
     if offers:
         cards = ""
@@ -215,17 +226,19 @@ def build_html(spec, ratio, base_dir):
             if o.get("price") not in (None, ""):
                 price = str(o["price"])
                 cur = o.get("currency", "¥")
+                unit_html = f'<small class="ou">{esc(o["unit"])}</small>' if o.get("unit") else ""
                 if re.match(r"^[\d.,]+$", price):
-                    c += f'<p class="op"><small>{esc(cur)}</small>{esc(price)}</p>'
+                    c += f'<p class="op"><small>{esc(cur)}</small>{esc(price)}{unit_html}</p>'
                 else:
-                    c += f'<p class="op">{esc(price)}</p>'
+                    c += f'<p class="op">{esc(price)}{unit_html}</p>'
             if o.get("original"):
                 c += f'<p class="oo">{esc(o["original"])}</p>'
             if o.get("note"):
                 c += f'<p class="onote">{rich(o["note"])}</p>'
             c += "</div>"
             cards += c
-        parts.append(f'<div class="offers" style="--n:{len(offers)}">{cards}</div>')
+        ot = f' data-title="{esc(data["offers_title"])}"' if data.get("offers_title") else ""
+        parts.append(f'<div class="offers" style="--n:{len(offers)}"{ot}>{cards}</div>')
 
     focus = esc(data.get("photo_focus", "50% 30%"))
     if photo:
@@ -292,6 +305,7 @@ def _run_chrome(chrome, html_path, size, scale, action):
         cmd = [
             chrome, "--headless=new", "--disable-gpu", "--hide-scrollbars", "--mute-audio",
             "--no-first-run", "--no-default-browser-check", "--allow-file-access-from-files",
+            "--run-all-compositor-stages-before-draw",
             f"--user-data-dir={prof}", f"--force-device-scale-factor={scale}",
             f"--window-size={w},{h}", "--virtual-time-budget=4000",
             *action, "file:" + pathname2url(str(html_path)),

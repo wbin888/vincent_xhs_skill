@@ -1,0 +1,21 @@
+{
+  "style": "ruby",
+  "output_name": "demo-yoga-double11-ruby",
+  "brand": {"name": "朵瑜伽", "name_en": "DUO YOGA"},
+  "hero": {"value": "11.11", "label": "年终礼遇 · 只此一档"},
+  "eyebrow": "YEAR-END GALA",
+  "title": "瑜伽年卡**宠粉价**",
+  "subtitle": "一年一次 · 给身体最好的犒赏",
+  "points": ["前 50 名加赠 1 个月", "老会员续卡 8 折"],
+  "offers_title": "双十一礼遇",
+  "offers": [
+    {"name": "瑜伽年卡", "note": "不限次 · 全部团课", "original": "¥6800", "price": "3999", "tag": "限量"},
+    {"name": "半年卡", "note": "不限次 · 可停卡 30 天", "original": "¥3800", "price": "2399"},
+    {"name": "私教 10 节", "note": "1v1 · 赠体态评估", "original": "¥4500", "price": "2999"}
+  ],
+  "date": "11.01 — 11.11",
+  "location": "成都 · 高新区 XX 广场 5F",
+  "contact": "预约热线 028-8888 6666",
+  "footnote": "活动卡项一经售出不退不换；以门店公示为准",
+  "ratios": ["3:4", "9:16", "1:1", "16:9"]
+}

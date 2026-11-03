@@ -1,0 +1,88 @@
+/* 奶咖焕新 · Latte Refresh — 普拉提 / 秋冬上新 / 体验课 / 新店
+   photo top with wave edge, script + bold italic title on photo, giant price over ghost "SPECIAL OFFER", numbered pill rows */
+.st-latte{--bg:#F6ECE0;--ink:#4A3426;--accent:#A0623A;--accent2:#E9D3BC;--pill:#FFFFFF;--line:rgba(160,98,58,.35);--onphoto:#FFFFFF;
+  --pmin:58rem;--base:3rem;
+  --wave:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><path d='M0 0H100V90C86 99 72 84 56 91S22 100 0 92Z'/></svg>");
+  background:linear-gradient(180deg,#EAD8C4 0%,#F6ECE0 55%,#F1E2D1 100%);
+  padding:5.5rem 7rem 4.5rem;gap:2rem;
+  grid-template-columns:minmax(0,1fr);
+  grid-template-rows:1fr auto auto auto auto auto;
+  grid-template-areas:"photo" "hero" "pts" "off" "info" "fine";
+  text-align:center}
+
+.st-latte .photo{margin:-5.5rem -7rem 0}
+.st-latte .photo .frame{-webkit-mask:var(--wave) 0 0/100% 100% no-repeat;mask:var(--wave) 0 0/100% 100% no-repeat}
+.st-latte .photo .frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,24,14,.28) 0%,rgba(40,24,14,0) 30%,rgba(40,24,14,0) 45%,rgba(40,24,14,.5) 100%)}
+.st-latte .photo.ph .frame{background:
+  radial-gradient(ellipse 30% 22% at 70% 30%,rgba(255,240,220,.7),transparent 70%),
+  repeating-linear-gradient(100deg,transparent 0 6rem,rgba(255,255,255,.05) 6rem 6.4rem),
+  linear-gradient(170deg,#C9A27E 0%,#9C7050 55%,#6E4B34 100%)}
+
+.st-latte .brand{grid-area:photo;align-self:start;z-index:2;color:var(--onphoto)}
+.st-latte .brand .bname{text-align:left}
+.st-latte .headline{grid-area:photo;align-self:end;align-items:center;z-index:2;color:var(--onphoto);padding-bottom:7rem;gap:.35em}
+.st-latte .headline .script{display:block;font-size:1.6em;color:#FFF3E4;margin-bottom:-.3em;text-shadow:0 .05em .3em rgba(0,0,0,.25)}
+.st-latte .eyebrow{font-size:.5em;letter-spacing:.4em;opacity:.9}
+.st-latte .title{font-size:calc(3.6em * var(--tk,1));font-weight:900;transform:skewX(-9deg);letter-spacing:.04em;text-shadow:0 .06em .3em rgba(40,24,14,.35)}
+.st-latte .title em{color:#F7D9B5}
+.st-latte .subtitle{font-size:.66em;font-weight:600;letter-spacing:.16em;opacity:1;border:2px solid currentColor;border-radius:99em;padding:.35em 1.4em;margin-top:.4em}
+
+/* giant price over ghost outline lettering */
+.st-latte .hero{justify-content:center;align-items:baseline;color:var(--accent);padding-top:.2em;isolation:isolate}
+.st-latte .hero::before{content:"SPECIAL OFFER";position:absolute;left:0;right:0;top:46%;transform:translateY(-50%);z-index:-1;overflow:hidden;white-space:nowrap;
+  font-family:var(--latin-serif);font-weight:700;font-style:italic;font-size:2.2em;letter-spacing:.06em;color:transparent;-webkit-text-stroke:2px rgba(160,98,58,.28)}
+.st-latte .hero .hl{order:-1;flex-basis:100%;display:flex;align-items:center;justify-content:center;gap:.8em;font-size:.68em;font-weight:800;letter-spacing:.3em;color:var(--ink);opacity:1;margin:0 0 .4em}
+.st-latte .hero .hl::before,.st-latte .hero .hl::after{content:"";width:3.4em;height:2px;background:currentColor}
+.st-latte .hero .hv{font-family:var(--latin-sans);font-size:5.2em;font-weight:900;letter-spacing:-.02em}
+.st-latte .hero .hu{font-size:1.3em;font-weight:800}
+
+.st-latte .points{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:0 .2em;border:2px solid var(--line);border-radius:1.2rem;padding:.7em 1em}
+.st-latte .points li{font-size:.62em;font-weight:600;letter-spacing:.06em}
+.st-latte .points li i{display:none}
+.st-latte .points li + li::before{content:"·";margin:0 .5em;color:var(--accent);font-weight:900}
+
+/* numbered pill rows */
+.st-latte .offers{grid-template-columns:minmax(0,1fr);gap:.9rem;counter-reset:o}
+.st-latte .offers[data-title]::before{content:attr(data-title);font-size:.62em;font-weight:800;letter-spacing:.3em;color:var(--accent)}
+.st-latte .offer{counter-increment:o;display:grid;grid-template-columns:auto minmax(0,1fr) auto auto auto;align-items:center;column-gap:1em;
+  background:var(--pill);border-radius:99em;padding:.45em .6em .45em .5em;box-shadow:0 .6rem 1.6rem rgba(120,72,40,.1);text-align:left}
+.st-latte .offer::before{content:counter(o,decimal-leading-zero);grid-column:1;display:grid;place-items:center;width:2.1em;height:2.1em;border-radius:50%;
+  background:var(--accent);color:#fff;font-size:.56em;font-weight:800}
+.st-latte .offer .otag{display:none}
+.st-latte .offer .on{grid-column:2;font-size:.72em;font-weight:800}
+.st-latte .offer .oo{grid-column:3;font-size:.48em}
+.st-latte .offer .op{grid-column:4;font-size:1.15em;color:var(--accent)}
+.st-latte .offer .onote{grid-column:5;font-size:.46em;font-weight:700;background:var(--accent2);color:var(--accent);padding:.35em .9em;border-radius:99em;opacity:1;white-space:nowrap}
+
+.st-latte .info{justify-content:center;text-align:left}
+.st-latte .info .meta{flex:0 1 auto}
+.st-latte .info .cta{background:var(--accent);color:#fff}
+.st-latte .fine{text-align:center}
+
+/* 9:16 */
+.st-latte.ra-tall{--base:3.25rem;--pmin:84rem;padding:6rem 7rem 5rem}
+.st-latte.ra-tall .photo{margin:-6rem -7rem 0}
+
+/* 1:1 & 16:9 — photo left with a vertical wave edge; text switches to ink */
+.st-latte.ra-square,.st-latte.ra-wide{
+  --wave:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'><path d='M0 0H92C99 14 84 28 91 44S100 78 93 100H0Z'/></svg>");
+  background:linear-gradient(90deg,#EAD8C4 0%,#F6ECE0 50%,#F1E2D1 100%);text-align:center}
+.st-latte.ra-square{--base:2.4rem;--pmin:0;padding:4.5rem 5rem 4rem;gap:1.3rem 3.5rem;
+  grid-template-columns:36rem minmax(0,1fr);grid-template-rows:auto auto auto auto 1fr auto;
+  grid-template-areas:"photo head" "photo hero" "photo pts" "photo off" "photo ." "photo info"}
+.st-latte.ra-square .photo,.st-latte.ra-wide .photo{margin:-4.5rem 0 -4rem -5rem}
+.st-latte.ra-square .photo .frame::after,.st-latte.ra-wide .photo .frame::after{background:linear-gradient(180deg,rgba(40,24,14,.3),rgba(40,24,14,0) 30%)}
+.st-latte.ra-square .headline,.st-latte.ra-wide .headline{grid-area:head;color:var(--ink);padding:0}
+.st-latte.ra-square .headline .script,.st-latte.ra-wide .headline .script{color:var(--accent);text-shadow:none}
+.st-latte.ra-square .title,.st-latte.ra-wide .title{text-shadow:none;color:var(--ink)}
+.st-latte.ra-square .title em,.st-latte.ra-wide .title em{color:var(--accent)}
+.st-latte.ra-square .hero .hv{font-size:4em}
+.st-latte.ra-square .fine{display:none}
+
+.st-latte.ra-wide{--base:2.6rem;--pmin:0;padding:5rem 7rem 4rem;gap:1.4rem 5rem;
+  grid-template-columns:72rem minmax(0,1fr) minmax(0,1.05fr);grid-template-rows:auto auto 1fr auto auto;
+  grid-template-areas:"photo head off" "photo hero off" "photo pts off" "photo info info" "photo fine fine"}
+.st-latte.ra-wide .photo{margin:-5rem 0 -4rem -7rem}
+.st-latte.ra-wide .hero .hv{font-size:4.4em}
+.st-latte.ra-wide .points{align-self:start}
+.st-latte.ra-wide .offers{align-self:center}

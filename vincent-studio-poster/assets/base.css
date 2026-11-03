@@ -14,6 +14,9 @@ img{display:block}
   --serif:"Songti SC","Source Han Serif SC","Noto Serif CJK SC","Noto Serif SC","STSong","SimSun",serif;
   --latin-serif:"Didot","Bodoni 72","Playfair Display","Cormorant Garamond","Noto Serif Display","Georgia",var(--serif);
   --latin-sans:"Helvetica Neue","Avenir Next","Inter","Arial",var(--sans);
+  --script:"Snell Roundhand","Brush Script MT","Dancing Script","Kaushan Script","Segoe Script",cursive;
+  --brush:"Xingkai SC","STXingkai","华文行楷","Kaiti SC","STKaiti","KaiTi","AR PL UKai CN","LXGW WenKai",var(--serif);
+  --hand:"Hannotate SC","HanziPen SC","Yuanti SC","LXGW WenKai","AR PL UKai CN","Kaiti SC","STKaiti",var(--sans);
   --condensed:"Oswald","Bebas Neue","DIN Condensed","Impact","Arial Narrow",var(--sans);
 }
 
@@ -104,3 +107,7 @@ img{display:block}
 /* circular frames: always a true circle that fits the cell */
 .photo.circle{container-type:size;display:grid;place-items:center}
 .photo.circle .frame{position:relative;inset:auto;width:min(100cqw,100cqh);height:min(100cqw,100cqh);border-radius:50%}
+
+/* optional decorative script line (spec.script); styles opt in */
+.headline .script{display:none;font-family:var(--script);font-size:1.1em;line-height:1}
+.offer .op .ou{font-size:.32em;font-weight:500;margin-left:.15em;letter-spacing:0}

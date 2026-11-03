@@ -1,0 +1,85 @@
+/* 红韵礼遇 · Ruby Gala — 瑜伽 / 双11 / 年终 / 会员礼遇
+   cream-to-red gradient, photo on top, italic serif numerals with orbit, white price card */
+.st-ruby{--bg:#FBF2EA;--ink:#3A1F1E;--accent:#C0262D;--accent2:#E9B9A6;--deep:#A31D24;--card:#FFFFFF;--line:rgba(192,38,45,.18);--onred:#FFF4EC;
+  --pmin:46rem;--base:3rem;
+  background:linear-gradient(180deg,#FBF2EA 0%,#F8E6DC 52%,#E9A898 74%,var(--deep) 86%,#8E1720 100%);
+  padding:5.5rem 7rem 4.5rem;gap:1.6rem 3rem;
+  grid-template-columns:minmax(0,1fr);
+  grid-template-rows:1fr auto auto auto auto auto auto;
+  grid-template-areas:"photo" "hero" "head" "pts" "off" "info" "fine";
+  text-align:center}
+
+.st-ruby .photo{margin:-5.5rem -7rem 0}
+.st-ruby .photo .frame{-webkit-mask:linear-gradient(180deg,#000 72%,transparent);mask:linear-gradient(180deg,#000 72%,transparent)}
+.st-ruby .photo.ph .frame{background:
+  radial-gradient(circle at 50% 46%,rgba(255,255,255,.65) 0 14%,transparent 14.4%),
+  radial-gradient(circle at 50% 46%,transparent 0 22%,rgba(192,38,45,.25) 22.2% 22.5%,transparent 22.7%),
+  radial-gradient(circle at 50% 46%,transparent 0 30%,rgba(192,38,45,.15) 30.2% 30.4%,transparent 30.6%),
+  linear-gradient(180deg,#F6D9CC 0%,#F2C9B8 60%,#FBF2EA 100%)}
+.st-ruby .brand{grid-area:photo;align-self:start;z-index:2;color:var(--ink)}
+.st-ruby.has-photo .brand{color:#fff;text-shadow:0 .1em .4em rgba(0,0,0,.25)}
+.st-ruby .brand .bname{text-align:left}
+.st-ruby .brand .bname b{font-family:var(--serif);letter-spacing:.16em}
+
+/* italic serif numerals with an orbit ring + sparkle */
+.st-ruby .hero{justify-content:center;justify-self:center;margin-top:-5rem;padding:0 .6em;color:var(--accent)}
+.st-ruby .hero::before{content:"";position:absolute;left:0;right:0;top:12%;height:62%;border:.06em solid currentColor;border-radius:50%;transform:rotate(-8deg);opacity:.75;pointer-events:none}
+.st-ruby .hero::after{content:"✦";position:absolute;right:0;top:0;font-size:1.4em;line-height:1}
+.st-ruby .hero .hv{font-family:var(--latin-serif);font-style:italic;font-weight:700;font-size:5.4em;letter-spacing:-.01em}
+.st-ruby .hero .hu{font-family:var(--serif);font-size:1.3em;font-weight:700}
+.st-ruby .hero .hl{font-family:var(--serif);font-size:.6em;letter-spacing:.4em;margin-top:.7em;color:var(--ink)}
+
+.st-ruby .headline{align-items:center}
+.st-ruby .eyebrow{font-family:var(--latin-serif);font-weight:400;font-size:.54em;letter-spacing:.42em;color:var(--accent)}
+.st-ruby .title{font-family:var(--serif);font-weight:900;color:var(--accent);letter-spacing:.1em;font-size:calc(3.1em * var(--tk,1))}
+.st-ruby .title em{color:var(--ink)}
+.st-ruby .subtitle{font-family:var(--serif);font-size:.78em;letter-spacing:.14em;opacity:.85}
+
+.st-ruby .points{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:.6em}
+.st-ruby .points li{font-size:.58em;padding:.35em 1.1em;border:1px solid var(--accent);border-radius:99em;color:var(--accent);font-weight:600;letter-spacing:.08em}
+.st-ruby .points li i{display:none}
+
+/* white card with offers list */
+.st-ruby .offers{grid-template-columns:minmax(0,1fr);gap:0;background:var(--card);border-radius:2.4rem;padding:1.1em 1.6em .7em;
+  box-shadow:0 1.6rem 4rem rgba(140,30,36,.18);text-align:left}
+.st-ruby .offers[data-title]::before{content:"— " attr(data-title) " —";text-align:center;font-family:var(--serif);font-weight:800;font-size:.8em;letter-spacing:.24em;color:var(--accent);padding-bottom:.5em}
+.st-ruby .offer{display:grid;grid-template-columns:minmax(0,1fr) auto auto;grid-template-areas:"name orig tag" "note orig price";column-gap:1.4em;row-gap:.1em;align-items:center;padding:.6em 0}
+.st-ruby .offer + .offer{border-top:1px dashed var(--line)}
+.st-ruby .offer .on{grid-area:name;font-size:.76em;font-weight:800}
+.st-ruby .offer .onote{grid-area:note;font-size:.5em;opacity:.65}
+.st-ruby .offer .oo{grid-area:orig;font-size:.5em;opacity:.55}
+.st-ruby .offer .oo::before{content:"原价 ";text-decoration:none;display:inline-block}
+.st-ruby .offer .otag{grid-area:tag;position:static;justify-self:end;align-self:end;background:var(--accent);color:#fff;font-size:.4em}
+.st-ruby .offer .op{grid-area:price;justify-self:end;font-family:var(--latin-serif);font-weight:700;color:var(--accent);font-size:1.5em}
+.st-ruby .offer:not(:has(.otag)){grid-template-areas:"name orig price" "note orig price"}
+
+.st-ruby .info{color:var(--onred);justify-content:center;text-align:left}
+.st-ruby .info .meta .date{font-family:var(--serif);letter-spacing:.08em}
+.st-ruby .info .cta{background:var(--onred);color:var(--deep)}
+.st-ruby .fine{color:var(--onred);opacity:.7}
+
+/* 9:16 */
+.st-ruby.ra-tall{--base:3.3rem;--pmin:70rem;padding:6rem 7rem 5rem}
+.st-ruby.ra-tall .photo{margin:-6rem -7rem 0}
+
+/* 1:1 & 16:9 — photo on the left, content right */
+.st-ruby.ra-square,.st-ruby.ra-wide{background:linear-gradient(180deg,#FBF2EA 0%,#F8E6DC 55%,#EBB0A0 76%,var(--deep) 88%,#8E1720 100%)}
+.st-ruby.ra-square{--base:2.4rem;--pmin:0;padding:4.5rem 5rem 3.5rem;gap:1.2rem 4rem;
+  grid-template-columns:38rem minmax(0,1fr);grid-template-rows:auto auto auto 1fr auto auto;
+  grid-template-areas:"photo hero" "photo head" "photo pts" "photo off" "photo info" "photo fine"}
+.st-ruby.ra-square .photo,.st-ruby.ra-wide .photo{margin:-4.5rem 0 -3.5rem -5rem}
+.st-ruby.ra-square .photo .frame,.st-ruby.ra-wide .photo .frame{-webkit-mask:linear-gradient(90deg,#000 75%,transparent);mask:linear-gradient(90deg,#000 75%,transparent)}
+.st-ruby.ra-square .hero,.st-ruby.ra-wide .hero{margin-top:0}
+.st-ruby.ra-square .hero .hv{font-size:4.2em}
+.st-ruby.ra-square .offers{align-self:center}
+.st-ruby.ra-square .fine{display:none}
+.st-ruby.ra-square .brand,.st-ruby.ra-wide .brand{margin:0 0 0 0}
+
+.st-ruby.ra-wide{--base:2.6rem;--pmin:0;padding:5rem 8rem 4rem;gap:1.4rem 6rem;
+  grid-template-columns:70rem minmax(0,1fr) minmax(0,1.1fr);grid-template-rows:auto auto 1fr auto auto;
+  grid-template-areas:"photo hero off" "photo head off" "photo pts off" "photo info info" "photo fine fine"}
+.st-ruby.ra-wide .photo{margin:-5rem 0 -4rem -8rem}
+.st-ruby.ra-wide .hero{align-self:end}
+.st-ruby.ra-wide .hero .hv{font-size:4.6em}
+.st-ruby.ra-wide .points{align-self:start}
+.st-ruby.ra-wide .offers{align-self:center}

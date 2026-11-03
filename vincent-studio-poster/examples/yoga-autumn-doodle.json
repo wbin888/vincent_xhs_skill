@@ -1,0 +1,21 @@
+{
+  "style": "doodle",
+  "output_name": "demo-yoga-autumn-doodle",
+  "brand": {"name": "向日葵瑜伽", "name_en": "SUNNY YOGA"},
+  "eyebrow": "AUTUMN YOGA CAMP",
+  "title": "秋日瑜伽**新手营**",
+  "subtitle": "零基础也能轻松跟上",
+  "points_title": "活动亮点",
+  "points": ["**21 天**养成运动习惯", "小班教学 · 老师逐个调整", "结营送**定制瑜伽垫**"],
+  "offers_title": "报名福利",
+  "offers": [
+    {"name": "新手营 21 天", "price": "399", "original": "¥680", "tag": "推荐"},
+    {"name": "双人同行", "price": "699", "note": "人均 ¥350"},
+    {"name": "体验课", "price": "29", "note": "限 1 次"}
+  ],
+  "date": "10.08 — 10.29 每周二四六",
+  "location": "广州 · 天河 XX 路 66 号",
+  "cta": "立即报名",
+  "footnote": "名额有限，报满即止",
+  "ratios": ["3:4", "9:16", "1:1", "16:9"]
+}

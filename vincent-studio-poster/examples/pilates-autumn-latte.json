@@ -1,0 +1,21 @@
+{
+  "style": "latte",
+  "output_name": "demo-pilates-autumn-latte",
+  "brand": {"name": "暖岛普拉提", "name_en": "NUANDAO PILATES"},
+  "script": "Autumn Pilates",
+  "eyebrow": "SEASON REFRESH",
+  "title": "秋日焕新季",
+  "subtitle": "体态管理 · 核心唤醒",
+  "hero": {"value": "¥199", "label": "限时特惠"},
+  "points": ["新人专享", "体态评估", "器械小班", "名额有限"],
+  "offers": [
+    {"name": "器械体验课 3 节", "original": "¥597", "price": "199", "note": "价值 ¥597"},
+    {"name": "小班 10 节卡", "original": "¥2380", "price": "1580", "note": "送评估"},
+    {"name": "私教 5 节卡", "original": "¥2400", "price": "1680", "note": "赠瑜伽垫"}
+  ],
+  "date": "活动时间 09.20 — 10.20",
+  "location": "上海 · 静安 XX 路 88 号",
+  "qr_label": "扫码咨询",
+  "footnote": "体验课每人限购 1 次",
+  "ratios": ["3:4", "9:16", "1:1", "16:9"]
+}

@@ -1,0 +1,21 @@
+{
+  "style": "noir",
+  "output_name": "demo-pilates-private-noir",
+  "brand": {"name": "MOVE 普拉提", "name_en": "MOVE PILATES STUDIO"},
+  "eyebrow": "PRIVATE · REFORMER",
+  "title": "做自己的光",
+  "script": "Pilates",
+  "subtitle": "私教 · 小班 · 器械普拉提",
+  "points": ["专业认证导师", "1v1 体态评估", "预约制小班"],
+  "offers": [
+    {"name": "私教课", "note": "Private Class", "price": "4980", "unit": "/10节"},
+    {"name": "小班课", "note": "Group Class", "price": "2680", "unit": "/18节"},
+    {"name": "双人课", "note": "Duet Class", "price": "3280", "unit": "/10节"},
+    {"name": "体验课", "note": "Trial Class", "price": "99", "unit": "/节"}
+  ],
+  "date": "11.01 — 11.30",
+  "location": "深圳 · 南山 XX 中心 7F",
+  "cta": "自律即自由",
+  "footnote": "价格为活动期间限定",
+  "ratios": ["3:4", "9:16", "1:1", "16:9"]
+}
