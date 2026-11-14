@@ -1,8 +1,4 @@
 interface:
-  display_name: "Vincent小红书爆款封面&招生海报（21种版式+173种美学全能版）"
-  short_description: "生成21种风格的小红书3:4竖版爆款封面与高转化招生海报提示词（1-8干货抠图风、9-15课程/瑜伽/普拉提招生海报风、16-21手绘/纯文本/简约/贴图/对比/单色网点印刷通用版），可叠加173种美学风格（东方古典/西方艺术/胶片摄影/插画/色彩调性等），全风格支持参考相片色调和谐匹配与文案重点提炼"
-  default_prompt: "Use $vincent-xhs-cover to analyze the reference photo and copy, recommend the best-fit styles (or let me pick any of 21 layouts plus an optional aesthetic), extract core copy highlights, and create a harmonious 3:4 Xiaohongshu cover or course enrollment poster prompt across 21 layout styles, optionally layered with up to two of 173 aesthetic styles."
-
-
-
-
+  display_name: "Vincent小红书爆款封面&招生海报（194种风格全能版）"
+  short_description: "生成194种风格的小红书3:4竖版爆款封面与高转化招生海报提示词（1-8干货抠图风、9-15课程/瑜伽/普拉提招生海报风、16-21手绘/纯文本/简约/贴图/对比/单色网点印刷通用版、22-194东方古典/西方艺术/胶片摄影/插画/色彩调性等173种美学风格），全风格支持参考相片色调和谐匹配与文案重点提炼"
+  default_prompt: "Use $vincent-xhs-cover to analyze the reference photo and copy, recommend the best-fit styles (or let me pick any of 194), extract core copy highlights, and create a harmonious 3:4 Xiaohongshu cover or course enrollment poster prompt."
