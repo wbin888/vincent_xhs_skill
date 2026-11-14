@@ -4,7 +4,7 @@
 
 > 本仓库还包含 **[vincent-studio-poster](#vincent-studio-poster工作室活动海报)**：瑜伽/健身/普拉提/康复/心身灵/音乐疗愈工作室的店庆、促销、节假日活动海报，直接输出 3:4、9:16、1:1、16:9 四规格 PNG。
 
-发一张人物照和一段文案，它会读取照片色调、提炼文案重点、推荐最合适的风格，再一步步问清细节，最后输出一段可直接复制给生图模型（Nano Banana / GPT-4o / 即梦 / Flux / Midjourney）的完整提示词。
+发一张人物照和一段文案，它会读取照片色调、提炼文案重点、推荐最合适的版式，还可以叠加宋式美学、胶片感、赛博朋克等 173 种美学风格，再一步步问清细节，最后输出一段可直接复制给生图模型（Nano Banana / GPT-4o / 即梦 / Flux / Midjourney）的完整提示词。
 
 - [快速开始](#快速开始)
 - [安装](#安装)
@@ -102,6 +102,7 @@ cd ~/vincent_xhs_skill && zip -r vincent-xhs-cover.zip vincent-xhs-cover
 
 ```bash
 ls ~/.claude/skills/vincent-xhs-cover/references/styles | wc -l   # 应输出 21
+ls ~/.claude/skills/vincent-xhs-cover/references/aesthetics.md     # 美学风格库存在
 ```
 
 然后**重启**工具（或开一个新会话），问一句“你能用哪些 skills？”，列表里出现 `vincent-xhs-cover` 即安装成功。
@@ -168,7 +169,7 @@ rm -rf ~/.claude/skills/vincent-xhs-cover
 - **智能推荐风格**：综合照片特征（服装、场景、色调、素材数量）与文案类型给出 Top 3 及理由。
 - **173 种美学叠加**：东方古典、日式、世界区域、西方艺术流派、数字科幻、胶片摄影、插画动画、色彩调性、暗黑亚文化等，按文案与照片推荐，叠加在任意版式上。
 - **出图前 9 项复核**：色调、文案层级、3:4 比例、五官不遮挡、手部结构、黄色统一 `#FDFFA7`、素材分工、零占位符、美学叠加合规。
-- **按需加载**：21 个风格模板各自独立，每次只读取选中的那一个，`SKILL.md` 仅约 15KB，响应更快、更省上下文。
+- **按需加载**：21 个风格模板各自独立，每次只读取选中的那一个；美学库只在选择叠加时读取，`SKILL.md` 约 21KB，响应更快、更省上下文。
 
 ## 21 种风格一览
 
@@ -234,6 +235,7 @@ rm -rf ~/.claude/skills/vincent-xhs-cover
 - 主标题超大、短促，移动端一眼可读。
 - 黄色统一使用柔和浅黄 `#FDFFA7`（风格 21 例外：最多 2 种油墨，按墨色表选色）。
 - 文字不遮挡眼睛和嘴巴，重要元素全部位于安全区内。
+- 美学叠加最多 2 个（1 个造型类 + 1 个色彩/光影类），色板向参考照色调靠拢，不改变版式骨架；吉卜力、皮克斯等工作室/在世艺术家相关风格在提示词中只写特征描述，不写名称。
 
 ## 目录结构
 
@@ -241,7 +243,7 @@ rm -rf ~/.claude/skills/vincent-xhs-cover
 vincent_xhs_skill/
 ├── README.md
 └── vincent-xhs-cover/            ← 安装时复制这个文件夹
-    ├── SKILL.md                  # 铁律、风格推荐、8 步问答、复核清单、输出格式
+    ├── SKILL.md                  # 铁律、风格推荐、8 步问答（含第 2.5 步美学叠加）、复核清单、输出格式
     ├── THIRD_PARTY_NOTICES.md    # 第三方许可声明
     ├── agents/openai.yaml        # Codex / OpenAI 展示信息
     ├── references/aesthetics.md  # 173 种美学风格库 + 叠加规则
@@ -261,6 +263,9 @@ vincent_xhs_skill/
 
 **它会直接出图吗？**
 默认输出提示词。如果当前工具支持生图且你要求直接出图，会先生成一张 3:4 竖图再附提示词。
+
+**怎么用 173 种美学风格？**
+选完版式后会问是否叠加美学，回复推荐编号、`0`（不叠加）或 `1+3` 组合即可；也可以首条消息直接说，例如“用风格 14 + 东方禅意 + 丁达尔效应”或“风格 9 + A115 时尚摄影”。完整清单见 [`references/aesthetics.md`](vincent-xhs-cover/references/aesthetics.md)。
 
 **可以不露脸吗？**
 选风格 17（纯文本版），上传一张色调参考图即可，也可以只在角落放一个小头像。
