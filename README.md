@@ -169,6 +169,23 @@ rm -rf ~/.claude/skills/vincent-xhs-cover
 
 ## 194 种风格一览
 
+### 效果示例
+
+<table>
+<tr>
+<td align="center"><img src="assets/examples/001-big-title.jpg" width="240" alt="1 爆款大字压顶风"><br>1 爆款大字压顶风</td>
+<td align="center"><img src="assets/examples/011-dopamine-class.jpg" width="240" alt="11 多巴胺活力团课"><br>11 多巴胺活力团课</td>
+<td align="center"><img src="assets/examples/014-natural-yoga.jpg" width="240" alt="14 自然疗愈·瑜伽"><br>14 自然疗愈·瑜伽</td>
+</tr>
+<tr>
+<td align="center"><img src="assets/examples/022-song-aesthetic.jpg" width="240" alt="22 宋式美学"><br>22 宋式美学</td>
+<td align="center"><img src="assets/examples/113-cyberpunk.jpg" width="240" alt="113 赛博朋克"><br>113 赛博朋克</td>
+<td align="center"><img src="assets/examples/130-film.jpg" width="240" alt="130 胶片摄影"><br>130 胶片摄影</td>
+</tr>
+</table>
+
+> 示例由 AI 生图模型按本 skill 的提示词生成，人物均为虚构；实际使用时会以你上传的照片为准。
+
 **体系一：经典大字抠图封面**
 
 | # | 风格 | 适合 |
@@ -205,6 +222,13 @@ rm -rf ~/.claude/skills/vincent-xhs-cover
 | 20 | 对比版 | Before/After、正误对比、避坑 |
 | 21 | 单色印刷版 | 读书/观点/文化活动、个人品牌、独立杂志与孔版网点质感 |
 
+<details>
+<summary>查看 1–21 配色卡</summary>
+
+![风格 1–21 配色卡](assets/styles/01-21-layouts.png)
+
+</details>
+
 **体系四：美学风格（22–194）**——统一套用通用美学封面版式（顶部标题 + 人物 + 3 条重点 + 底部 CTA），画面气质由所选风格决定；色板融入参考照色调，绘画/插画类人物以该风格重绘且五官神似。
 
 | 编号 | 分类 | 举例 |
@@ -221,6 +245,79 @@ rm -rf ~/.claude/skills/vincent-xhs-cover
 | 176–194 | 补充风格 | 电影写真、手办、版画、港风动漫、复古动漫、莫奈/毕加索/伦勃朗/马蒂斯式 |
 
 每个风格的色彩/构图/质感/光线关键词与通用版式模板见 [`22-194-aesthetic-library.md`](vincent-xhs-cover/references/styles/22-194-aesthetic-library.md)。
+
+每个风格的配色卡（色块按色彩关键词示意，非实际出图效果）：
+
+<details>
+<summary>22–58 中国古典 · 文人美学 · 东方幻想</summary>
+
+![22–58 中国古典 · 文人美学 · 东方幻想](assets/styles/022-058.png)
+
+</details>
+
+<details>
+<summary>59–70 日本与东亚近现代</summary>
+
+![59–70 日本与东亚近现代](assets/styles/059-070.png)
+
+</details>
+
+<details>
+<summary>71–82 世界区域美学</summary>
+
+![71–82 世界区域美学](assets/styles/071-082.png)
+
+</details>
+
+<details>
+<summary>83–110 西方艺术流派</summary>
+
+![83–110 西方艺术流派](assets/styles/083-110.png)
+
+</details>
+
+<details>
+<summary>111–129 数字 · 科幻 · 现代设计</summary>
+
+![111–129 数字 · 科幻 · 现代设计](assets/styles/111-129.png)
+
+</details>
+
+<details>
+<summary>130–140 摄影与光影</summary>
+
+![130–140 摄影与光影](assets/styles/130-140.png)
+
+</details>
+
+<details>
+<summary>141–159 插画 · 动画 · 绘本</summary>
+
+![141–159 插画 · 动画 · 绘本](assets/styles/141-159.png)
+
+</details>
+
+<details>
+<summary>160–172 色彩与调性</summary>
+
+![160–172 色彩与调性](assets/styles/160-172.png)
+
+</details>
+
+<details>
+<summary>173–175 亚文化与暗黑</summary>
+
+![173–175 亚文化与暗黑](assets/styles/173-175.png)
+
+</details>
+
+<details>
+<summary>176–194 补充风格</summary>
+
+![176–194 补充风格](assets/styles/176-194.png)
+
+</details>
+
 
 ## 设计规范
 
@@ -246,8 +343,11 @@ rm -rf ~/.claude/skills/vincent-xhs-cover
 ```text
 vincent_xhs_skill/
 ├── README.md
+├── assets/examples/          # README 效果示例图
+├── assets/styles/            # README 风格配色卡
+├── scripts/gen_style_cards.py # 重新生成配色卡
 └── vincent-xhs-cover/            ← 安装时复制这个文件夹
-    ├── SKILL.md                  # 铁律、风格推荐、8 步问答、复核清单、输出格式
+    ├── SKILL.md                  # 铁律、风格推荐、9 步问答、复核清单、输出格式
     ├── THIRD_PARTY_NOTICES.md    # 第三方许可声明
     ├── agents/openai.yaml        # Codex / OpenAI 展示信息
     └── references/styles/        # 1–21 各自的模板 + 22–194 美学风格库
